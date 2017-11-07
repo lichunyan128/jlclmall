@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1">
+		<title>美容档案</title>
+		<link rel="stylesheet" href="../../assets/css/skin_ai_system/cropper.min.css" />
+		<link rel="stylesheet" href="../../assets/css/skin_ai_system/skin_stystem.css" />
+	</head>
+	<style>
+		.user_message input{
+			width:35%;height: 26px;padding: 0;
+			display: block;
+			border: 1px solid rgba(0, 0, 0, .2);border-radius: 5px;
+			text-align: center;
+		}
+		.baseMessage{
+			line-height: 22px;
+		}
+		.user_message li:first-child{
+			margin: 0;
+		}
+		header{
+			width: 100%;height: 234px;
+			background:url(../../assets/img/skin_system_banner1.jpg)no-repeat;
+			margin-bottom: 23%;
+			background-size: 100% 100%;
+			}
+		nav{
+			position: absolute;
+			top: 203px;left: 1%; 
+			width: 98%;
+			background:#fff;
+			box-shadow:1px 1px 10px rgba(6, 0, 0, .3);
+			}
+		select{
+			border: 1px solid #c6c5ca;
+			}
+		/*弹框样式*/
+		.remind_case{height:480px;width:100%;background:rgba(77,77,79,.2);position: fixed;bottom: 0px;z-index: 15;display: none;}
+		.remind_text{width: 90%;height: 340px;border-radius:10px;background: #fff;margin: 80px auto;position: relative;}
+		
+		.remind_text p{width: 80%;height:20px;margin: 0 auto;text-align: center;font-size: 15px;padding-bottom: 11px;line-height: 33px;padding-top: 85px;}
+		.remind_confirm{width: 102px;height: 44px;line-height: 44px;margin: 80px auto;background: #e50150;color: #fff;text-align: center;font-size: 21px;border-radius: 5px;}
+		/*弹框样式end*/
+		
+		@media only screen and (min-width: 320px) and (max-width: 360px) {
+			header{margin-bottom: 30%;}
+		}
+		@media only screen and (min-width: 361px) and (max-width: 375px) {
+			header{margin-bottom: 25%;}
+		}
+		@media only screen and (min-width: 400px) and (max-width: 414px) {
+			.photo_scope span:nth-child(3){margin-left:55px;}
+			#showResult div .image{position: absolute;top: 43px;left: 13px;width: 20%;}
+			#showResult div:nth-child(2) .image{left: 153px;}
+			#showResult div:nth-child(3) .image{left: 295px;}
+		}
+		@media only screen and (min-width: 320px) and (max-width: 320px) {
+			.changeAvatar img{width: 90px;height:110px;}
+			#showResult div .image{position: absolute;top: 34px;left: 13px;width: 20%;}
+			#showResult div:nth-child(2) .image{left: 116px;}
+			#showResult div:nth-child(3) .image{left: 222px;}
+			.photo_scope{margin-top: 0px;}
+			.photo_scope span{width: 30%;}
+			.photo_scope span:nth-child(1){margin-left: -3px;}
+			.photo_scope span:nth-child(2){margin-left: 10px;}
+			.photo_scope span:nth-child(3){margin-left: 15px;}
+		}
+		@media only screen and (min-width: 360px) and (max-width: 360px) {
+			#changeAvatar0 strong{left: 87px;}
+			#changeAvatar1 strong{left:200px;}
+			#showResult div .image{position: absolute;top: 46px;left: 13px; float: left;width: 20%;}
+			#showResult div:nth-child(2) .image{left: 128px;}
+			#showResult div:nth-child(3) .image{left: 245px;}
+			#showResult{height: 110px;}
+			.remark{margin-left: 71%;}
+			.first_confirm{left:98px;}
+		}
+
+	</style>
+	<body>
+		<header></header>
+		<nav>
+			<ul class="user_message clearfix flx-center" >
+				<li class="baseMessage flx-start">
+					姓名： 
+					<input id="name" type="text" questList = "name">
+				</li>
+				<li class="baseMessage flx-start">
+					年龄：
+					<input id="age" min='1' max='150' type="number" questList = "age">
+				</li>
+			</ul>
+			<!--省市县-->
+			<div id="linkage">地址：
+				<select class="province">
+					<option>请输入地址</option>
+					<option>河北省</option>
+				</select> 
+				<select class="city">
+					<option>朝阳区</option>
+					<option>石家庄市</option>
+				</select>
+			</div>
+		</nav>
+		<section class="container">
+			<!--多选-->
+			<div class="module_box">
+				<p class="questionnaire">肌肤问题：(可多选)</p>
+				<section class="module_context">
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "dry" value="干燥"/>干燥
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "acnes" value="痤疮"/>痤疮
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "acne" value="粉刺"/>粉刺
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "dullYellow" value="暗黄"/>暗黄
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "sensitivity" value="敏感"/>敏感
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "allergic" value="过敏"/>过敏
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "patch" value="色斑"/>色斑
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "couperoseSkin" value="红血丝"/>红血丝
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "microgroove" value="细纹"/>细纹
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "couperoseSkin" value="毛孔粗大"/>毛孔粗大
+					<input type="checkbox" name="checkbox1" class="checkbox_acquiescent" questList = "microgroove" value="肤色不均匀"/>肤色不均匀
+				</section>
+			</div>
+				
+			<!--问卷调查-->
+			<div class="module_box">
+				<p class="questionnaire" >肌肤出现问题多久了？</p>
+				<section class="module_context">
+					<input type="text" placeholder="自行填写" class="write_month" questList = "time"/>
+				</section>
+			</div>
+			<div class="module_box">
+				<p class="questionnaire">肌肤是否有自觉症状？</p>
+				<section class="module_context" questList = "symptom">
+					<input type="radio" name="symptom" value="1" class="check_yes symptom_yes checkbox_acquiescent"/> 是
+					<input type="radio" name="symptom" value="0" class="check_no symptom_no checkbox_acquiescent"/> 否
+					<div class="fill_reason subjectiveSymptom">
+						<input type="checkbox" name="checkbox2" class="checkbox_acquiescent" questList = "goRed" value="泛红"/>泛红
+						<input type="checkbox" name="checkbox2" class="checkbox_acquiescent" questList = "itch" value="痒"/>痒
+						<input type="checkbox" name="checkbox2" class="checkbox_acquiescent" questList = "burningHot" value="发烫"/>发烫
+						<input type="checkbox" name="checkbox2" class="checkbox_acquiescent" questList = "swollen" value="红肿"/>红肿
+						<input type="checkbox" name="checkbox2" class="checkbox_acquiescent" questList = "uptight" value="紧绷"/>紧绷
+						<input type="checkbox" name="checkbox2" class="checkbox_acquiescent" questList = "biting" value="刺痛"/>刺痛
+						<input type="checkbox" name="checkbox2" class="checkbox_acquiescent" questList = "peeling" value="起皮"/>起皮
+					</div>
+				</section>
+			</div>
+			<div class="module_box">
+				<p class="questionnaire">是否去过美容院？</p>
+				<section class="module_context" questList = "beautyQarlor">
+					<input type="radio" name="beautyQarlor" value="1" class="check_yes beauty_yes checkbox_acquiescent"/> 是
+					<input type="radio" name="beautyQarlor" value="0"  class="check_no beauty_no checkbox_acquiescent"/> 否
+					<input type="text" placeholder="做过的美容项目" questList = "project" class="fill_reason beauty_item"></input>
+				</section>
+			</div>	
+			<div class="module_box">
+				<p class="questionnaire">是否涂抹皮肤类药膏？</p>
+				<section class="module_context" questList = "hospitalTreat">
+					<input type="radio" name="hospitalTreat" value="1" class="check_yes unguent_yes checkbox_acquiescent"/> 是
+					<input type="radio" name="hospitalTreat" value="0"  class="check_no unguent_no checkbox_acquiescent"/> 否
+				</section>
+			</div>	
+			<div class="module_box">
+				<p class="questionnaire">最近一年使用的什么品牌护肤品及产品功效？</p>
+				<section class="module_context">
+					<input type="text" placeholder="如：雅诗兰黛、保湿系列、洁面乳" questList = "product" class="use_product"></input>
+				</section>
+			</div>
+			<div class="module_box">
+				<p class="questionnaire">近一个月护肤品的使用步骤？</p>
+				<div class="ues_product">
+					<p>例如（填写产品全称）</p>
+					<p>1.某品牌洁面</p>
+					<p>2.某品牌化妆水</p>
+					<p>3.某品牌精华</p>
+					<p>4.某品牌面霜</p>
+					<p>5.某品牌BB霜</p>
+					<p>6.等等</p>
+				</div>
+				<div class="night useStep">
+					<div>晚上：<span>增加步骤</span><b class="addBtn nightBtn">+</b></div>
+					<p>步骤1<input class="night_step" type="text" questList = "nig_step1"/></p>
+					<p>步骤2<input type="text" questList = "nig_step2"/></p>
+					<p>步骤3<input type="text" questList = "nig_step3"/></p>
+				</div>
+				<div class="morning useStep">
+					<div>早上：<span>增加步骤</span><b class="addBtn morningBtn">+</b></div>
+					<p>步骤1<input class="morning_step" type="text" questList = "mor_step1"/></p>
+					<p>步骤2<input type="text" questList = "mor_step2"/></p>
+					<p>步骤3<input type="text" questList = "mor_step3"/></p>
+				</div>
+			</div>
+			<div class="module_box">
+				<p class="use_mask  questionnaire">是否使用面膜？</p>
+				<section class="module_context" questList = "mask">
+					<input type="radio" name="mask" value="1" class="check_yes mask_yes checkbox_acquiescent"/> 是
+					<input type="radio" name="mask" value="0" class="check_no mask_no checkbox_acquiescent"/> 否
+					<div class="fill_reason useMaskFrequency" questList = "useMaskPeriod">
+						<input type="radio" name="mask1" class="checkbox_acquiescent" value="1天1次"/>1天1次
+						<input type="radio" name="mask1" class="checkbox_acquiescent" value="2天1次"/>2天1次
+						<input type="radio" name="mask1" class="checkbox_acquiescent" value="3天1次"/>3天1次
+						<input type="radio" name="mask1" class="checkbox_acquiescent" value="5天1次"/>5天1次
+						<input type="radio" name="mask1" class="checkbox_acquiescent" value="7天1次"/>7天1次
+						<input type="radio" name="mask1" class="checkbox_acquiescent" value="不规律"/>不规律
+					</div>
+				</section>
+			</div>
+			<div class="module_box">
+				<p class="questionnaire">洗澡的周期及时间？</p>
+				<section class="module_context">
+					<input type="text" class="bath_period" placeholder="例：每周一次，每次20分钟" questList = "bath"></input>
+				</section>
+			</div>
+			<div class="module_box">
+				<p class="questionnaire">饮食起居及习惯？</p>
+				<section class="module_context">
+					<input type="text" class="dietary" placeholder="例：喜欢吃辣，早8点起，晚23点睡觉" questList = "dietary"></input>
+				</section>
+			</div>
+			
+			<div class="module_box">
+				<p class="questionnaire">是否在怀孕期间？</p>
+				<section class="module_context" questList = "pregnancy">
+					<input type="radio"  name="pregnancy" value="1" class="check_yes pregnancy_yes checkbox_acquiescent"/> 是
+					<input type="radio"  name="pregnancy" value="0" class="check_no pregnancy_no checkbox_acquiescent"/> 否
+					<div class="fill_reason pregnancyTime" questList = "pregnancyTime">
+						<input type="radio" name="pregnancyTime" class="checkbox_acquiescent" value="3个月以内"/>3个月以内
+						<input type="radio" name="pregnancyTime" class="checkbox_acquiescent" value="3-5个月"/>3-5个月
+						<input type="radio" name="pregnancyTime" class="checkbox_acquiescent" value="5-10个月"/>5-10个月
+					</div>
+				</section>
+			</div>
+			
+			<div class="module_box">
+				<p class="questionnaire">是否有美容师接待？</p>
+				<div class="module_context" questList = "reception">
+					<input type="radio"  name="reception" value="1" class="check_yes reception_yes checkbox_acquiescent"/> 是
+					<input type="radio"  name="reception" value="0" class="check_no reception_no checkbox_acquiescent"/> 否
+					<div class="fill_reason numbers">
+						填写编号：<input class="beauticianNumber" type="text" name="receptWay"  questList = "beauticianNumber">
+					</div>
+					<div class="fill_reason writeWechat">
+						联系方式：<input class="contactWay" type="number" name="receptWay"  placeholder="微信号/手机号" questList = "contactWay">
+					</div>
+				</div>
+			</div>
+			<!--按照要求上传照片-->
+			<div class="module_box">
+				<p class="questionnaire upload_pictures">按照要求上传肌肤照片</p>
+				<!--选择文件-->
+				<section class="upload_photo module_context">
+					<div id="showResult">
+						<!--上传图片展示-->
+				        <div id="changeAvatar0" class="changeAvatar">
+				           <img class='blow_up' data-id="blow_up1" src="../../assets/img/skin_system_user_page_frount.jpg">
+				           <input id="image" data-id="blow_up1" class="image" type="file" questList = "front0" accept="image/*" capture="camera" data-url="http://web.jlclmall.cn/upload_id_pic"/>
+				        </div>
+				        <div id="changeAvatar1" class="changeAvatar">
+				           <img class='blow_up' data-id="blow_up2" src="../../assets/img/skin_system_user_page_offside.jpg">
+				           <input id="image2" data-id="blow_up2" class="image" type="file" questList = "front1" accept="image/*" capture="camera" data-url="http://web.jlclmall.cn/upload_id_pic"/>
+				        </div> 
+				        <div id="changeAvatar2" class="changeAvatar  mui-clearfix">
+				           <img class='blow_up' data-id="blow_up3" src="../../assets/img/skin_system_user_page_left_side.jpg">
+				           <input id="image3" data-id="blow_up3" class="image" type="file" questList = "front2" accept="image/*" capture="camera" data-url="http://web.jlclmall.cn/upload_id_pic"/>
+				        </div>
+				    	
+				    </div>
+				    <div class="photo_scope">
+			    		<span>正面</span>
+			    		<span>右侧面45°</span>
+			    		<span>左侧面45°</span>
+				    </div>
+				    <!--裁剪-->
+				    <div id="showEdit">
+				        <div class="choose_bttn">
+				            <button class="mui-btn" data-mui-style="fab" id='cancleBtn'>取消</button>
+				            <button class="mui-btn" data-mui-style="fab" data-mui-color="primary" id='confirmBtn'>确定</button>
+				        </div>
+				        <div id="report" class="report">
+				          <img class="reportImg" src="../../assets/img/skin_system_user_page_frount.jpg">
+				      	</div> 	
+				    </div>
+				    <p class="note" id="note_first">*注：请在光线充足且不化妆，不使用美颜相机环境下拍摄，以便美容师准确判断肌肤问题</p>
+					<p class="note">*/上传成功后，在示范处自动更换成客户照片</p>
+				</section>
+			</div>
+			<input type="button" class="confirm" id="confirm" value="确定" />
+			
+		</section>
+		<!--信息没填写提示框-->
+		<div class="remind_case" id="remind_case">
+			<div class="remind_text">
+				<p class="hint_information"></p>
+				<div class="remind_confirm" id="remind_confirm" >确定</div>
+			</div>	
+		</div>
+		
+		
+		
+		<script type="text/javascript" src="../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script type="text/javascript" src="../../assets/js/common/mui.min.js" ></script>
+		<script type="text/javascript" src="../../assets/js/skin_ai_system/dist/lrz.all.bundle.js" ></script>
+		<script type="text/javascript" src="../../assets/js/skin_ai_system/cropper.min.js" ></script>		
+		<script type="text/javascript" src="../../assets/js/skin_ai_system/user_page.js" ></script>
+		
+	</body>
+</html>

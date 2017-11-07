@@ -1,0 +1,96 @@
+.container{
+	width: 90%;
+	margin:7% auto;
+	display:flex;
+	justify-content: space-between;
+}
+.container_left,.container_right{
+	width: 49.5%;
+}
+.container_left{
+	background:#eee;
+}
+.listHeader{
+	width:90%;
+	margin:0 auto;
+	border-bottom:1px solid #bebebe;
+}
+.listHeader li{
+	float: left;
+	height:60px;
+	line-height:60px;
+	width: 10%;
+	text-align: center;
+	font-size:20px;
+}
+.listHeader li:hover{
+	color:#000;
+	font-weight:600;
+}
+.commodityList{
+	margin:18px 0px;
+}
+.commodityList li{
+	height:30px;
+	line-height:30px;
+	padding-left: 40px;
+}
+.commodityList li a{
+	display: inline-block;
+	height: 30px;
+	width:100%;
+}
+.commodityList li:hover{
+	background:#000;
+}
+.commodityList li a:hover{
+	color:#fff;
+}
+.more{
+	margin-left: 78%;
+	display: none;
+}
+.container_right{
+	height:380px;
+	position: relative;
+}
+.zixun_pic{
+	margin:1.5% 0;
+}
+.zixun_pic img{
+	width: 100%;
+}
+.picShow{
+	display: none;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1700px) {
+	.more{
+		margin-left: 73%;
+	}
+	.zixun_pic{
+		margin:5% 0;
+	}
+}
+@media only screen and (min-width: 1000px) and (max-width: 1399px) {
+	.more{
+		margin-left: 68%;
+	}
+	.zixun_pic{
+		margin:10% 0;
+	}
+}
+@media only screen and (min-width: 700px) and (max-width: 999px) {
+	.more{
+		margin-left: 65%;
+	}
+	.zixun_pic{
+		margin:15% 0;
+	}
+}
+@media only screen and (min-width: 500px) and (max-width: 699px) {
+	.more{
+		margin-left: 60%;
+	}
+}
+
+

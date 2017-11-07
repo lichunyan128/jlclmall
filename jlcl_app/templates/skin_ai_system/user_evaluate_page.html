@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1" />
+		<title>用户评价页面</title>
+		<link rel="stylesheet" href="../../assets/css/common/mui.min.css" />
+		<link rel="stylesheet" href="../../assets/css/skin_ai_system/cropper.min.css" />
+		<link rel="stylesheet" href="../../assets/css/skin_ai_system/skin_stystem.css" />
+		<style>
+			header{width: 100%;height: 234px;background:url(../../assets/img/skin_system_banner1.jpg)no-repeat;
+					background-size: 100% 100%;}
+			.user_problem{position: relative;top: -36px;background:#fff;box-shadow:1px 1px 10px rgba(6, 0, 0, .3);}
+			.userId{color: #fff;line-height: 40px;padding-left: 15px;}
+			.product_scheme p{color: #474753;line-height: 19px;margin-left: 72px;}
+			.user_messages{line-height:40px;margin: 2px auto;}
+			.user_messages li{width: 98%;margin: 0 auto; color:#e40051;padding-left: 8px;}
+			.user_messages li:last-child{display: flex;justify-content: space-between;padding: 15px 0px;border-bottom:none;}
+			.user_messages li:last-child img{width: 100px;height: 120px;}
+			.user_messages li span{color: #474550;}
+			.user_messages li:nth-child(3){position: relative;margin-bottom: 10px;}
+			.user_messages li:nth-child(3) span{display:inline-block;line-height: 24px;position: absolute;top: 10px;}
+			#note_first{margin-top: -17px;}
+			.note{padding-left: 15px;}
+			.remark {margin-left:80%;color: #929197;height: 40px;}
+			.remark img{width: 25px;vertical-align: middle;margin-left: 5px;}
+			.module_box{margin-top: -30px;margin-bottom: 27px;overflow:hidden;}
+			.client_remark_box{width: 95%;height:150px;border: 1px solid #dbdbdb;margin:20px auto;}
+			.input_box{width:97%;height:216px;margin: 10px auto;border: 1px solid #ccc;position: relative;}     
+			.input_text{width:100%;margin: 0 auto;font-size: 15px; outline: none;resize: none;table-layout:fixed;word-break:break-all;border: none;}
+			.click_publish{width: 100px;height: 45px;line-height:45px;background: #f29c9f;text-align: center;color: #fff;font-size: 16px;margin-left: 70%;
+							margin-top: 15px;margin-bottom: 20px;}
+			.camera{margin-top: 20px;position: relative;}	
+			/*上传图片*/			
+			.camera img{width: 42px;height: 36px;}
+			.camera input{position: absolute;top: 5px;left: 2px;width: 40px;opacity: 0;}
+			input{opacity: 0;}
+			#img_con li{text-align: center;list-style: none;width:117px;height:78px;float: left;}
+			.upLoad{float: left;width:117px;height:78px;background-color: #eee;font-size: 150px;line-height: 53px;color: #fff;text-align: center;display: none;}
+			.more_list{width: 100%;color: #484651;}
+			.user_remark{display: none;}
+			.similarity_skin{margin-top: -15px;}
+			.similarity_skin .module_box{margin-top: 9px;}
+			#showEdit{position: fixed;}
+			#showResult div .image{position: absolute;top: 48px;left: 13px;width: 20%;}
+			.choose_bttn{position: relative;top: 48px;}
+			/*弹框样式*/
+			.remind_case{height:480px;width:100%;background:rgba(77,77,79,.2);position: fixed;bottom: 0px;z-index: 15;display: none;}
+			.remind_text{width: 90%;height: 340px;border-radius:10px;background: #fff;margin: 80px auto;position: relative;}
+			
+			.remind_text p{width: 80%;height:20px;margin: 0 auto;text-align: center;font-size: 15px;padding-bottom: 11px;line-height: 33px;padding-top: 85px;}
+			.remind_confirm{width: 102px;height: 44px;line-height: 44px;margin: 80px auto;background: #e50150;color: #fff;text-align: center;font-size: 21px;border-radius: 5px;}
+			/*弹框样式end*/
+			
+			@media only screen and (min-width: 330px) and (max-width: 375px) {
+				.click_publish{margin-left: 67%;}
+			}
+			@media only screen and (min-width: 320px) and (max-width: 320px) {
+				.changeAvatar img{width: 90px;height:110px;}
+				.click_publish{margin-left: 62%;}
+				.remark{margin-left: 74%;}
+				.user_messages li:last-child{padding-left: 0px;}
+				.user_messages li:last-child img{width: 90px;height: 110px;}
+				#showResult div:nth-child(2) .image{left: 106px;}
+				#showResult div:nth-child(3) .image{left: 212px;}
+				#showResult{height: 100px;}
+				.remark{margin-left: 71%;}
+			}
+			@media only screen and (min-width: 360px) and (max-width: 360px) {
+				#showResult div:nth-child(2) .image{left: 125px;}
+				#showResult div:nth-child(3) .image{left: 246px;}
+			}
+			@media only screen and (min-width: 412px) and (max-width: 412px) {
+				#showResult div:nth-child(2) .image{left: 140px;}
+				#showResult div:nth-child(3) .image{left: 275px;}
+				#showResult{height: 100px;}
+				
+			}
+			@media only screen and (min-width: 400px) and (max-width: 414px) {
+				#changeAvatar0 strong{left: 79px;}
+				#changeAvatar1 strong{left:204px;}
+				#showResult div:nth-child(2) .image{left: 140px;}
+				#showResult div:nth-child(3) .image{left: 275px;}
+			}
+			@media only screen and (min-width: 361px) and (max-width: 375px) {
+				#showResult div:nth-child(2) .image{left: 125px;}
+				#showResult div:nth-child(3) .image{left: 246px;}
+			}
+			a{color: #fff;}
+			.mui-scroll-wrapper{position: static;margin-top: -72px;}
+			.mui-content{background:#f6f6f6 ;}
+			.mui-scroll,.mui-pull-bottom-pocket{position: static;}
+			.container{margin-top: 9px;}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<section class="user_problem">
+			<ul class="user_messages">
+				<li>年龄：<span>29</span></li>
+				<li>地区：<span>山东省 青岛市</span></li>
+				<li>肌肤问题：<span>干燥 痤疮 粉刺 暗黄 敏感</span></li>
+				<li>肌肤出现问题多久了？：<span>1个月</span></li>
+				<li>肌肤是否有自觉症状？：<span>泛红 痒 发烫 红肿 紧绷泛红 痒 发烫 红肿 紧绷</span></li>
+				<li>是否在怀孕期间？：<span>3-5个月</span></li>
+				<li class="user_messages_pic">
+					<img src="../../assets/img/skin_system_case_library_uesr_picture_one.jpg" />
+					<img src="../../assets/img/skin_system_case_library_uesr_picture_three.jpg" />
+					<img src="../../assets/img/skin_system_case_library_uesr_picture_two.jpg" />
+				</li>
+			</ul>
+		</section>
+		<!--跟进-->			
+		<section class="container" id="container">
+			<div class="context">
+				
+			</div>
+		</section>
+		<!--裁剪-->
+		 <div id="showEdit">
+	        <div class="choose_bttn">
+	            <button class="mui-btn" data-mui-style="fab" id='cancleBtn'>取消</button>
+	            <button class="mui-btn" data-mui-style="fab" data-mui-color="primary" id='confirmBtn'>确定</button>
+	        </div>
+	        <div id="report" class="report">
+	          <img src="../../assets/img/skin_system_user_page_frount.jpg">
+	      	</div> 	
+	    </div> 
+	
+		<div class="container similarity_skin">
+			<section class="more_list">以下客户和您的肌肤问题情况相似：</section>
+			<div class="module_box">
+				<div class="userId">
+					<img src="../../assets/img/skin_system_solve_skin_problem.svg"/>
+					<span>客户编号：HB20170001</span>
+				</div>
+				<div class="userMessage">
+					<p>客户使用前照片:</p>
+					<div class="user_picture">
+						<img src="../../assets/img/skin_system_solve_skin_problem_front.png" />
+						<img src="../../assets/img/skin_system_solve_skin_problem_side.png" />
+					</div>
+				</div>
+				<div class="skin_issue clearfix">
+					<p>肌肤问题：</p>
+					<p>
+						<span>干燥</span>
+						<span>痤疮</span>
+						<span>粉刺</span>
+						<span>暗黄肤色不均匀</span>
+					</p>
+					<div class="access"><a href="#">点击进入</a></div>
+				</div>
+			</div>
+			<div class="module_box">
+				<div class="userId">
+					<img src="../../assets/img/skin_system_solve_skin_problem.svg"/>
+					<span>客户编号：HB20170001</span>
+				</div>
+				<div class="userMessage">
+					<p>客户使用前照片:</p>
+					<div class="user_picture">
+						<img src="../../assets/img/skin_system_solve_skin_problem_front.png" />
+						<img src="../../assets/img/skin_system_solve_skin_problem_side.png" />
+					</div>
+				</div>
+				<div class="skin_issue clearfix">
+					<p>肌肤问题：</p>
+					<p>
+						<span>干燥</span>
+						<span>痤疮</span>
+						<span>粉刺</span>
+						<span>暗黄肤色不均匀</span>
+					</p>
+					<div class="access" id="access">点击进入</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--信息没填写提示框-->
+		<div class="remind_case" id="remind_case">
+			<div class="remind_text">
+				<p class="hint_information"></p>
+				<div class="remind_confirm" id="remind_confirm" >确定</div>
+			</div>	
+		</div>
+		
+		
+		<script type="text/javascript" src="../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script type="text/javascript" src="../../assets/js/common/mui.min.js" ></script>
+		<script type="text/javascript" src="../../assets/js/skin_ai_system/dist/lrz.all.bundle.js" ></script>
+		<script type="text/javascript" src="../../assets/js/skin_ai_system/cropper.min.js" ></script>
+		<script type="text/javascript" src="../../assets/js/skin_ai_system/user_evaluate_page.js" ></script>
+		
+		<script>
+		//ajax获取
+			var comt=1;
+			var remarkBtn=1;
+			var user_remark=1;
+			var click_publish=1;
+			var imgI=0 ,face=0 ;
+			var remark=1;
+				
+			var template_1 = 
+				'<section class="user_problem" >'
+					+'<p class="userId">肌肤跟进'+ (comt++) +'</p>'
+					+'<ul class="user_messages">'
+						+'<li>使用时间：<span>2017.02.12-2017.03.12</span></li>'
+						+'<li class="product_scheme">产品方案：'
+							+'<p>早：</p>'
+							+'<p>1.赫伯洁面</p>'
+						+'</li>'
+						+'<li class="product_scheme">注意事项：'
+							+'<p>面膜周期：3天一次；洗澡周期：四天一次；</p>'
+						+'</li>'
+						+'<li>客户照片：</li>'
+						+'<li>'
+							+'<img src="../../assets/img/skin_system_case_library_uesr_picture_one.jpg" />'
+							+'<img src="../../assets/img/skin_system_case_library_uesr_picture_three.jpg" />'
+							+'<img src="../../assets/img/skin_system_case_library_uesr_picture_two.jpg" />'
+						+'</li>'
+					+'</ul>'
+					+'<p class="note" id="note_first">*注：请在光线充足且不化妆，不使用美颜相机环境下拍摄，以便美容师准确判断肌肤问题</p>'
+					+'<p class="note">*/上传成功后，在示范处自动更换成客户照片</p>'
+					+'<div class="remark">评语<img class="click_remark" data-id="'+ (remarkBtn++) +'" src="../../assets/img/skin_system_user_evaluate_page_remark.svg"> </div>'
+				+'</section>';
+				var template_2 =
+				'<div class="module_box user_remark" data-id="'+ (user_remark++) +'"> '  
+			         +'<div class="input_box">'     
+			           +'<textarea class="input_text" placeholder="客户反馈及评语" questList="remark'+ (remark++) +'"></textarea>'
+			            	+'<section class="upload_photo module_context">'
+								+'<div id="showResult">';
+				var template_3 ="";
+					for(var i = 0;i<3;i++){
+					      template_3+="<div id='changeAvatar"+imgI+"' class='changeAvatar'> " +
+					          "<img class='blow_up' src='../../assets/img/skin_system_user_page_offside.jpg'>" +
+					          "<input id='image"+imgI+"' class='image'  type='file' accept='image/*' capture='camera' questList = 'front" + face +"'/>" +
+					          "</div>";
+					      imgI++;
+					      face++;
+					  };
+				var template_4=			        
+							    '</div>'
+							+'</section>'
+			         +'</div>'
+					+'<div class="click_publish"  data-id="'+ (click_publish++) +'">点击发布</div>'
+				+'</div>';
+				var template = template_1 + template_2 + template_3 + template_4;
+			$('.context').append(template);
+			
+		</script>
+		
+		
+
+	</body>
+</html>

@@ -1,0 +1,179 @@
+*{margin: 0; padding: 0;}
+html,body{height: 100%;width: 100%;margin: 0 auto;font-family: "微软雅黑";}
+.clearfix{clear: both;}
+ul{list-style: none;}
+ul li{float: left;}
+a{text-decoration: none;color:#fff;}
+header{width: 100%;height: 92px;background: #523a22;font-size: 14px;}
+.nav_box{width: 60%;margin: 0 auto;}
+.logo_box{width: 198px;float: left;margin-left:2.5%;}
+.top_logo{width: 100%;margin-top: 24px;}
+.navigation{float:left;width:68%;height: 60px;line-height:68px;margin-top: -60px;margin-left: 35%;}
+.navigation li{width:16%;text-align: center;color: #fff;}
+header .nav_box .navigation li a{text-align: center;display: inline-block;}
+.swiper-container img{display: block;width: 100%;}
+.swiper-container .swiper-pagination{left: -27.5%;}
+.swiper-container .swiper-pagination-bullet{width: 13px;height: 13px;background:#fff;opacity: 1;}
+.swiper-container .swiper-pagination-bullet-active{background:#523a22;}
+.container{position: relative;}
+.brand_picture,.brand_story{width:65%;margin-left:25%;position: relative;z-index: 5;}
+.brand_picture div{width:320px;float: left;}
+.brand_picture div img,.brand_story div img{width: 100%;display: block;border: none;}
+.brand_story div{float: left;}
+.background_bar{position: absolute;top:62.5%;left:20% ;}
+.foot{margin-top: 20%;}
+footer{width: 100%;height: 90px;background: #523a22;font-size: 12px;}
+footer ul{width:47%;height: 30px;margin:0 auto;}
+footer ul a{color:#cc9461;text-align: center;display: inline-block;}
+footer ul li{height: 19px;line-height:19px;color: #cc9461;width: 10%;text-align: center;border-right: 2px solid #cc9461;margin-top:42px;}
+footer ul li:last-child{width: 23%;text-align: center;border: none;}
+/*product_page*/
+.product_list_box{width: 57%;margin: 0 auto;}
+.product_list_box img{display: block;}
+.product_list_top{margin-top: 22px;}
+.product_list_top{display: flex;justify-content: space-between;}
+.product_list_top .list_top_left{width: 42%;}
+.product_list_top .list_top_left img{width: 100%;}
+.product_list_top .list_top_right{width: 58%;}
+.product_list_top .list_top_right a img{width: 100%;}
+.product_list_ele{display: flex;justify-content: space-between;flex-wrap: wrap;margin: 10px 0;}
+.product_list_ele div{width:32%;position: relative;}
+.product_list_ele div img,a img{width: 100%;}
+.product_list_ele div a{width: 100%;}
+.product_list_ele div .product,.productPresentation{position: absolute;top: 0px;left: 0px;}
+.product_list_ele .firstRow{margin-top: 11px;}
+.product_list_ele .secondRow,.thirdRow{margin-top: 34%;}
+.product_list_ele div .product{z-index: 2;}
+/*product_page里面的单个商品*/
+
+.product_intro_content .particulars{
+	border: 1px solid rgba(0,0,0,0);
+	max-width: 1920px;
+	}
+.product_intro_content .particulars .particulars_top{
+	width: 351px;height: 315px;
+	margin-left: 62%;
+	margin-top: 10%;
+}
+.product_intro_content .purpose{
+	color: #523922;
+	max-width: 1920px;
+	margin-top: 12%;
+}
+.product_intro_content .purpose p{
+	width: 370px;
+	line-height: 26px;
+	margin-left: 62%;
+}
+
+@font-face { 
+	font-family:AdobeSongStd-Light_1;
+	src: url(../../fonts/AdobeSongStd-Light_1.TTF);
+	} 
+.product_intro_content .particulars .en_name{
+	font-family: AdobeSongStd-Light_1, sans-serif;
+	line-height: 27px;font-size: 30px;
+	}
+@font-face { 
+	font-family:FZZXHJW_0;
+	src: url(../../fonts/FZZXHJW_0.TTF);
+	}
+.product_intro_content .particulars .cn_name{
+	font-family: FZZXHJW_0, sans-serif;font-size: 26px;margin-top: 15px;
+	}
+.product_intro_content .particulars .cut_off_rule{
+	border-bottom: 2px solid  #523922;margin-top: 15px;
+	}
+
+.product_intro_content .particulars .big_title{
+	font-family: FZZXHJW_0, sans-serif;font-size: 43px;margin-top: 15px;
+	}
+.product_intro_content .particulars .efficiency{
+	font-family: FZZXHJW_0, sans-serif;font-size: 20px;line-height:40px;margin-top: 10px;
+}	
+.product_intro_content .purpose{
+	font-family: FZZXHJW_0, sans-serif;
+}
+.product_intro_content .usage{
+	font-family: FZZXHJW_0, sans-serif;
+	margin-top: 25px;
+}	
+
+.hot_container div .en_name{
+	font-family: AdobeSongStd-Light_1, sans-serif;
+	font-size: 22.5px;
+	width: 100%;text-align: center;
+	}	
+	
+.hot_container div .cn_name{
+	font-family: FZZXHJW_0, sans-serif;
+	font-size: 16px;
+	width: 100%;text-align: center;
+}
+/*兼容火狐*/
+@-moz-document url-prefix(){
+	.product_list_ele .secondRow,.thirdRow{margin-top:371px;}
+	}
+	
+/*适配屏幕大小*/
+@media only screen and (min-width: 1735px) and (max-width: 1910px) {
+	.background_bar{left:18.9%;}
+}
+@media only screen and (min-width: 1523px) and (max-width: 1735px) {
+	.background_bar{left:19.9%;}
+}
+@media only screen and (min-width: 1300px) and (max-width: 1522px) {
+	.brand_picture div{width:234px;}
+	.brand_story div:first-child{width:298px;}
+	.brand_story div:nth-child(2){width:170px;}
+	.brand_story div:last-child{width:234px;}
+	.background_bar{left:19.9%;}
+	.background_bar img{height: 261px;}
+	footer ul{width: 55%;}
+}
+@media only screen and (min-width: 1000px) and (max-width: 1301px) {
+	.brand_picture div{width:193px;}
+	.brand_story div:first-child{width:245px;}
+	.brand_story div:nth-child(2){width:139px;}
+	.brand_story div:last-child{width:191px;}
+	.background_bar{left:19.9%;}
+	.background_bar img{height: 215px;}
+	footer ul{width: 70%;}
+	footer ul li{width: 10%;margin-top:33px;}
+}
+@media only screen and (min-width: 850px) and (max-width: 999px) {
+	.nav_box{width: 80%;}
+	.brand_picture div{width:146px;}
+	.brand_story div:first-child{width:187px;}
+	.brand_story div:nth-child(2){width:106px;}
+	.brand_story div:last-child{width:141px;}
+	.background_bar{left:19.9%;}
+	.background_bar img{height: 164px;}
+	footer ul{width: 85%;}
+}
+@media only screen and (min-width: 692px) and (max-width: 847px) {
+	.nav_box{width: 100%;}
+	.brand_picture div{width:146px;}
+	.brand_story div:first-child{width:187px;}
+	.brand_story div:nth-child(2){width:106px;}
+	.brand_story div:last-child{width:141px;}
+	.background_bar{left:19.9%;}
+	.background_bar img{height: 164px;}
+	footer ul{width: 100%;font-size: 12;margin-left:0;padding: 0;line-height: 25px;}
+	footer ul li{width: 10%;margin-top: 30px;}
+	footer ul li:last-child{width: 26%;}
+}
+@media only screen and (min-width: 400px) and (max-width: 691px) {
+	.navigation{padding: 0px;}
+	.nav_box{width: 100%;}
+	.brand_picture div{width:98px;}
+	.brand_story div:first-child{width:125px;}
+	.brand_story div:nth-child(2){width:71px;}
+	.brand_story div:last-child{width:100px;}
+	.background_bar{left:19.9%;}
+	.background_bar img{height: 109px;}
+	footer ul{width: 100%;font-size: 12;margin-left:0;padding: 0;line-height: 25px;}
+	footer ul li{width: 10%;margin-top: 30px;}
+	footer ul li:last-child{width: 26%;}
+}
+		

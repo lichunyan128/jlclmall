@@ -1,0 +1,82 @@
+.container{
+	width: 90%;
+	margin:7% auto;
+	display:flex;
+	justify-content: space-between;
+}
+.container_left,.container_right{
+	width: 49.5%;
+}
+.container_left ul li{
+	background:#eee;
+}
+.container_left ul li p{
+	width: 90%;
+	margin:0 auto;
+}
+.title{
+	font-size:16px;
+	font-weight: 600;
+	padding-top: 20px;
+	color:#000;
+}
+.intro{
+	border-bottom:1px solid #bebebe;
+	padding:20px 0px;
+}
+.container_left ul li:last-child .intro{
+	border-bottom:none;
+}
+.titleHover{
+	font-size:16px;
+	font-weight: 600;
+	padding-top: 20px;
+	color: #fff;
+}
+.introHover{
+	border: none;
+	padding:20px 0px;
+	color:#fff;
+}
+.container_right{
+	position: relative;
+}
+.zixun_pic{
+	margin:auto;
+}
+.zixun_pic img{
+	width: 100%;
+}
+.picShow{
+	display: none;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+	.zixun_pic{
+		margin:3% 0;
+	}
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+	.zixun_pic{
+		margin:6% 0;
+	}
+}
+@media only screen and (min-width: 1241px) and (max-width: 1399px) {
+	.zixun_pic{
+		margin:13% 0;
+	}
+}
+@media only screen and (min-width: 1200px) and (max-width: 1240px) {
+	.zixun_pic{
+		margin:18% 0;
+	}
+}
+@media only screen and (min-width: 1000px) and (max-width: 1199px) {
+	.zixun_pic{
+		margin:21% 0;
+	}
+}
+@media only screen and (min-width: 200px) and (max-width: 999px) {
+	.zixun_pic{
+		margin:26% 0;
+	}
+}

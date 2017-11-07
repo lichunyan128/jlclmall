@@ -1,0 +1,206 @@
+pop_boxhtml,body{width: 100%;font-family: "微软雅黑";font-size: 14px;background:#f6f6f6;color: #3e3a38;}
+body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, input, abbr, article, aside, figcaption, fieldset, figure, footer, header, mark, meter, menu, nav, output, progress, section, summary, time
+{list-style: none;margin: 0;padding: 0; }
+iframe, a, img, button { border: 0; }
+.clearfix:after {    
+    visibility: hidden;    
+    display: block;    
+    font-size: 0;    
+    content: " ";    
+    clear: both;    
+    height: 0;    
+} 
+.askQuestion,.supplementaryQuestion,.uploadPictures{
+	width:100%;
+	background:#ffffff;
+	margin-bottom: 8px;
+}
+.askQuestion textarea,.supplementaryQuestion textarea{
+	width:90%;
+	margin-left:4%;
+	height: 100px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.uploadPictures{
+	height: 200px;
+}
+.chooseLabel{
+	width:100%;
+	background:#ffffff;
+	margin-top: -8px;
+	padding-bottom: 40px;
+}
+.addLabel{
+	width: 85px;
+	height: 35px;
+	line-height:35px;
+	text-align:center;
+	border-radius:5px;
+	font-size:17px;
+	background:#474753;
+	color:#fff;
+	margin-left:72%;
+}
+.userProblem{
+	width:90%;
+	margin:15px auto;
+}
+.userProblem span{
+	color:#f19800;
+	font-size:15px;
+	margin-left:10px;
+}
+.submitBtn{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 40px;
+	margin: 0 auto;
+	background:#e50150;
+	font-size: 20px;
+	color:#ffffff;
+	text-align: center;
+	line-height: 40px;
+	margin-top: 10px;
+}
+#showResult{
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+.changeAvatar{
+	margin-top:20px;
+	width:30%;
+	position: relative;
+}
+.changeAvatar .blow_up{
+	width: 100%;
+}
+.changeAvatar .image{
+	position: absolute;
+	top: 1px;
+	left: 21%;
+	width: 59%;
+    height: 90%;
+    border: 1px solid;
+	opacity:0;
+	}
+.photo_scope{
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+.photo_scope div{
+	width:30%;
+	margin-top:10px;
+	text-align: center;
+}
+/*裁剪*/
+#showEdit{
+	display: none;
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+    left: 0;
+	z-index: 9;
+	}
+.choose_bttn{
+	width:100%;
+	position: absolute;
+	top:52px;
+	left:0px;
+	z-index: 10;
+	}
+.choose_bttn .mui-btn{
+	width:50px;
+	height: 29px;
+	background: #fff;
+}	
+#cancleBtn{
+	margin-left: 50px;
+	}
+#cancleBtn:hover{
+	background: #2e5ef9;
+	color: white;
+	}
+#confirmBtn{
+	float:right;
+	margin-right: 50px;
+	}
+#confirmBtn:hover{
+	background: #2e5ef9;
+	color: white;
+	}
+.report{
+	background: rgba(0,0,0,.3);
+}
+.report img{
+	width:100%;
+	margin:0 auto;
+}
+	
+/*弹框*/
+.pop_box{
+	width:100%;
+	background-color: rgba(0, 0, 0, 0.4);  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-top: -50%;
+    margin-left: -50%;
+	z-index:5;
+	display: none;
+}
+.pop_content{
+	width:90%;
+	margin:37px auto;
+	background-color:#fff;
+	padding-bottom: 20px;  
+}
+.top_list{
+	width: 90%;
+	margin:20px auto;
+	padding-top:30px;
+	}
+.top_list li{
+	display:inline-block;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin: 5px 5px 5px 0px;
+	color:#68696e;
+	background: #cacaca;
+	}
+.top_list_hover{
+	background: #474753 !important;
+	color: #fff !important;
+	}
+.pop_affirm,.pop_off{
+	width: 80%;
+	height:40px;
+	line-height: 40px;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	font-size:17px;
+	border-radius: 4px;
+	margin-top: 20px;
+}	
+.pop_affirm{
+	background:#e50150;
+	margin-top: 34%;
+}
+.pop_off{
+	background:#474753;
+}
+/*警示框样式*/
+.caution{height:480px;width:100%;background:rgba(77,77,79,.2);position: fixed;bottom: 0px;z-index: 15;display: none;}
+.caution_text{width: 90%;height: 340px;border-radius:10px;background: #fff;margin: 80px auto;position: relative;}
+
+.caution_text p{width: 80%;height:20px;margin: 0 auto;text-align: center;font-size: 15px;padding-bottom: 11px;line-height: 33px;padding-top: 85px;}
+.caution_confirm{width: 102px;height: 44px;line-height: 44px;margin: 80px auto;background: #e50150;color: #fff;text-align: center;font-size: 21px;border-radius: 5px;}
+/*警示框样式end*/

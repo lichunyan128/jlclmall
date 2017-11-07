@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1" />
+		<title>问题肌肤护理系统首页</title>
+		<link rel="stylesheet" href="../../assets/css/common/mui.min.css" />
+		<link rel="stylesheet" href="../../assets/css/skin_ai_system/skin_stystem.css" />
+		<style>
+			header{width: 98%;margin: 0 auto;font-size: 14px;position: fixed;top: 0;left: 2%;z-index: 10;}
+			a{color: #aeadb2;}
+			.more_list{width: 100%;position: fixed;top: 111px;z-index: 15;}
+			.mui-scroll-wrapper{top: 160px;}
+			.mui-content{background:#f6f6f6 ;margin-bottom: 50px;}
+			footer a{color: #fff}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="top_list clearfix">
+				<a href="#">干燥</a>
+				<a href="#">痤疮</a>
+				<a href="#">粉刺</a>
+				<a href="#">暗黄</a>
+				<a href="#">敏感</a>
+				<a href="#">过敏</a>
+				<a href="#">色斑</a>
+				<a href="#">红血丝</a>
+				<a href="#">细纹</a>
+				<a href="#">毛孔粗大</a>
+				<a href="#">肤色不均匀</a>
+			</div>
+		</header>
+		<section class="more_list">
+			<a href="actualite_list.html">更多<span>></span></a>
+		</section>
+		
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<section class="container">
+					
+							
+				</section>
+			</div>
+		</div>
+			
+		
+		<footer class="skin_report"><a href="#">肌肤报备</a></footer>
+		
+		
+		<script type="text/javascript" src="../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script type="text/javascript" src="../../assets/js/common/mui.min.js" ></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			var id=0;
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					var template = 
+					'<div class="module_box">'
+						+'<div class="userId">'
+							+'<img src="../../assets/img/skin_system_solve_skin_problem.svg"/>'
+							+'<span>客户编号：HB20170001</span>'
+						+'</div>'
+						+'<div class="userMessage">'
+							+'<p>客户使用前照片:</p>'
+							+'<div class="user_picture">'
+								+'<img src="../../assets/img/skin_system_solve_skin_problem_front.png" />'
+								+'<img src="../../assets/img/skin_system_solve_skin_problem_side.png" />'
+							+'</div>'
+						+'</div>'
+						+'<div class="skin_issue clearfix">'
+							+'<p>肌肤问题：</p>'
+							+'<p>'
+								+'<span>干燥</span>'
+								+'<span>痤疮</span>'
+								+'<span>粉刺</span>'
+								+'<span>暗黄肤色不均匀</span>'
+							+'</p>'
+							+'<div class="access" id = '+ (id++) +'>点击进入</div>'
+						+'</div>'
+					+'</div>';
+					$('.container').append(template);
+				}, 1500);
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			} else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				});
+			}
+			//跳转
+			mui(".container").on('tap','.access',function(){
+			// 获取id
+			    var id = this.getAttribute("id");
+			    mui.openWindow({
+			        id:id,
+			//      url:'{{ url_for('jl_ai.health_history_skin_solution') }}?user_skin_id=' + id
+			    });
+			})
+		</script>
+		
+		
+		
+	</body>
+</html>

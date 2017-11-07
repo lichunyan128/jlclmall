@@ -1,0 +1,69 @@
+html,body{background: #ececec;font-family: "微软雅黑";font-size: 12px;}
+body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, input, abbr, article, aside, figcaption, fieldset, figure, footer, header, mark, meter, menu, nav, output, progress, section, summary, time{list-style: none;margin: 0;padding: 0; }
+iframe, a, img, button {
+  border: 0; }
+input, textarea, select, a img, a {
+  outline: none;
+  border-radius: 0;
+  box-shadow: none;
+  border: none; }
+.brand_log{width: 100%;}
+.brand_log img{width: 100%;display: block;}
+.brand_log img:last-child{margin-bottom:4px;}
+.container{width: 100%;margin-bottom:40px;padding-right:0px;padding-left:0px;}
+.container_top{height:26px;color: white;padding-left:13px;line-height:26px;font-size:12px;}
+
+.brand_img{width: 27%;float: left;height: 95px;margin-top: 5px;}
+.brand_img img{width:100px;height: 90px;}
+.mui-media-body{width: 73%;}
+.mui-table-view:after{background-color:none;content: none;}
+.mui-table-view:before{height: 0px;}
+.mui-table-view-cell{border-bottom: 1px solid #e9e7e7;padding: 8px 11px;}
+.introduce{margin-top: 6px;}
+.introduce p:first-child{margin-top: 6px;}
+.introduce p{margin-left: 13px;}
+.introduce_name span{color: #b81b22;}
+.introduce_name{font-size: 15px;color:#3e3a39;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+.price{height:25px;line-height:37px;margin-top:4px;position: relative;}
+.price span:first-child{font-size:15px;color:#b12031;}
+.price span:nth-child(2){color: #9d9c9c;font-size:12px;margin-left:12px;text-decoration:line-through;}
+.discount{position: absolute;top:3px;width:38px;height:18px;background: #b81b22;color:white;text-align:center;font-size:12px;
+						line-height:18px;border-radius:5px;margin-left: 9px;}
+.brand_link{width: 100%;flex: display;display: -webkit-flex;display: flex;-webkit-justify-content: space-between;
+		justify-content: space-between;margin-top:6px;}
+.brand_link a{display: block;width: 49.6%;}
+.brand_link a img{display: block;width: 100%;}
+/*添加地址*/
+.adress_hull{width: 100%;height:100px;background: white;border-bottom:1px solid #ececec ;border-top:1px solid #ececec ;}
+.adress{font-size:14px;color:#4c4c4c ;margin-left:19px;margin-right:19px;}
+.adress_user_name{margin-top: 3px;display: flex;justify-content: space-between;}
+.title{text-align: center;line-height: 44px;font-size: 18px;font-weight: bold;}
+header{width: 100%;height:44px;background: white;}
+header ul li{float: left;height:44px;line-height:44px;}
+header li:first-child{width: 6%; margin-left:25px;font-size: 13px;position: relative;text-align: right;}
+header li:first-child img{margin-top: -3px;}
+header li:nth-child(2){width: 69%;font-size: 19px;font-weight: bold;text-align: center;}
+header li:nth-child(3){width: 6%;margin-left: 27px;}
+.search_logo img{width: 100%;}
+header li:first-child img{width: 100%;}
+.btn{padding: 0;margin: 0;}
+.dropdown-menu{top: 91%;left: -21px;padding: 0;margin: 0;min-width: 70px;text-align: center;}
+.dropdown-menu p{line-height: 30px;}
+.dropdown-menu a{color: #393838;}
+/*footer{background: #fff;width: 100%;height:43.5px;z-index: 11;border-top: 1px solid #ADACB2 ;position: fixed;bottom: 0;left: 0;}
+footer ul{display: flex;justify-content: space-around;height:42px;text-align: center;}
+footer li{width: 25%;line-height: 42px;}
+footer img{height:25px;width:27px;}*/
+
+footer{background: #fff;width: 100%;height:43px;z-index: 11;border-top: 1px solid #ADACB2 ;position: fixed;bottom: 0;left: 0;}
+footer ul{display: flex;justify-content: space-around;height:43px;text-align: center;}
+footer li{width: 25%;height:43px;}
+footer li:first-child{background: url(../../img/jlcl_homepage_footer_gray1.svg)no-repeat 36px 9px;background-size: 29px 27px;}
+footer li:nth-child(2){background: url(../../img/jlcl_homepage_footer_gray2.svg)no-repeat 33px 9px;background-size: 31px 27px;}
+footer li:nth-child(3){background: url(../../img/jlcl_homepage_footer_gray3.svg)no-repeat 39px 9px;background-size: 29px 27px;}
+footer li:nth-child(4){background: url(../../img/jlcl_homepage_footer_gray4.svg)no-repeat 39px 9px;background-size: 29px 27px;}
+
+@media only screen and (min-width: 300px) and (max-width: 320px) {
+	.introduce p{margin-left: 24px;}
+}

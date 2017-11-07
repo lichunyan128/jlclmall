@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1" />
+		<title>当前话题列表</title>
+		<link rel="stylesheet" href="../../assets/css/skin_system/skin_stystem.css" />
+		<link rel="stylesheet" href="../../assets/css/common/mui.min.css" />
+		<style>
+			html,body{background-color: #fff;}
+			.list{width: 100%;height: 40px;line-height: 40px; border-bottom: 1px solid #d8d8d8;padding-left: 15px;color: #d8d8d8;}
+			.connect{color: #d8d8d8;}
+			.messageList{
+				margin-bottom:45px; 
+			}
+			footer a{color: #fff;}
+		</style>
+	</head>
+	<body>
+		<div id="pullrefresh" class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view mui-table-view-chevron messageList">
+					<a class="connect" href="#"><li class="list">干燥</li></a>
+					<a class="connect" href="#"><li class="list">痤疮</li></a>
+					<a class="connect" href="#"><li class="list">粉刺</li></a>
+					<a class="connect" href="#"><li class="list">暗黄</li></a>
+					<a class="connect" href="#"><li class="list">敏感</li></a>
+					<a class="connect" href="#"><li class="list">过敏</li></a>
+					<a class="connect" href="#"><li class="list">色斑</li></a>
+					<a class="connect" href="#"><li class="list">红血丝</li></a>
+					<a class="connect" href="#"><li class="list">细纹</li></a>
+					<a class="connect" href="#"><li class="list">毛孔粗大</li></a>
+					<a class="connect" href="#"><li class="list">肤色不均匀</li></a>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<footer class="skin_report"><a href="#">肌肤报备</a></footer>
+		
+		<script type="text/javascript" src="../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script type="text/javascript" src="../../assets/js/common/mui.min.js" ></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					}
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			var id = 0;
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var ul = document.body.querySelector('.mui-table-view');
+					var lis = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = lis.length, len = i + 3; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'list';
+						li.innerHTML = '<a class="connect" id = '+ (id++) +'>干燥 ' + '</a>';
+						//下拉刷新，新纪录插到最前面；
+						ul.insertBefore(li, ul.firstChild);
+					}
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+				}, 1500);
+			}
+	
+			//跳转
+			mui(".mui-table-view").on('tap','.connect',function(){
+			// 获取id
+			    var id = this.getAttribute("id");
+			    mui.openWindow({
+			        id:id,
+			//      url:'{{ url_for('jl_ai.health_history_skin_solution') }}?user_skin_id=' + id
+			    });
+			})
+		</script>
+		
+	</body>
+</html>

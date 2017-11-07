@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1" />
+		<title>用户提问页</title>
+		<link rel="stylesheet" href="../../../assets/css/skin_ai_system/cropper.min.css" />
+		<link rel="stylesheet" href="../../../assets/css/common/layer.css" />
+		<link rel="stylesheet" href="../../../assets/css/ai_qa/user_ask_question.css" />
+	</head>
+	<body>
+		<div class="askQuestion">
+			<textarea placeholder="请填写提问问题"></textarea>
+		</div>
+		<div class="supplementaryQuestion">
+			<textarea placeholder="补充问题"></textarea>
+		</div>
+		<div class="uploadPictures">
+			<div id="showResult">
+				<!--上传图片展示-->
+		        <div id="changeAvatar0" class="changeAvatar">
+		           <img class='blow_up' data-id="blow_up1" src="../../../assets/img/skin_system_user_page_frount.jpg">
+		           <input id="image" data-id="blow_up1" class="image" type="file" accept="image/*" questList = "front0" data-url="http://web.jlclmall.cn/upload_id_pic"/>
+		        </div>
+		        <div id="changeAvatar1" class="changeAvatar">
+		           <img class='blow_up' data-id="blow_up2" src="../../../assets/img/skin_system_user_page_offside.jpg">
+		           <input id="image2" data-id="blow_up2" class="image" type="file" accept="image/*" questList = "front1" data-url="http://web.jlclmall.cn/upload_id_pic"/>
+		        </div> 
+		        <div id="changeAvatar2" class="changeAvatar  mui-clearfix">
+		           <img class='blow_up' data-id="blow_up3" src="../../../assets/img/skin_system_user_page_left_side.jpg">
+		           <input id="image3" data-id="blow_up3" class="image" type="file" accept="image/*" questList = "front2" data-url="http://web.jlclmall.cn/upload_id_pic"/>
+		        </div>
+		    	
+		    </div>
+		    <div class="photo_scope">
+	    		<div>正面</div>
+	    		<div>右侧面45°</div>
+	    		<div>左侧面45°</div>
+		    </div>
+		    <!--裁剪-->
+		    <div id="showEdit">
+		        <div class="choose_bttn">
+		            <button class="mui-btn" data-mui-style="fab" id='cancleBtn'>取消</button>
+		            <button class="mui-btn" data-mui-style="fab" data-mui-color="primary" id='confirmBtn'>确定</button>
+		        </div>
+		        <div id="report" class="report">
+		          <img class="reportImg" src="../../../assets/img/skin_system_user_page_frount.jpg">
+		      	</div> 	
+		    </div>
+		</div><!--uploadPictures-->
+		<div class="chooseLabel">
+			<div class="addLabel" id="addLabel">+选标签</div>
+			<div class="userProblem"></div>
+		</div>
+		<div class="submitBtn" id="submitBtn">确认</div>
+		<!--弹框-->
+		<div class="pop_box">
+			<div class="pop_content">
+				<ul class="top_list clearfix">
+					<li>干燥</li>
+					<li>痤疮</li>
+					<li>粉刺</li>
+					<li>黑头</li>
+					<li>敏感</li>
+					<li>皱纹</li>
+					<li>细纹</li>
+					<li>红血丝</li>
+					<li>毛孔粗大</li>
+					<li>肤色不均匀</li>
+				</ul>
+				<div class="pop_affirm" id="pop_affirm">确认</div>
+				<div class="pop_off" id="pop_off">取消</div>
+			</div>
+		</div>
+		
+		<!--信息没填写警示框-->
+		<div class="caution" id="caution">
+			<div class="caution_text">
+				<p class="hint_information"></p>
+				<div class="caution_confirm" id="caution_confirm" >确定</div>
+			</div>	
+		</div>
+		
+		<script type="text/javascript" src="../../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script type="text/javascript" src="../../../assets/js/skin_ai_system/cropper.min.js" ></script>
+		<script type="text/javascript" src="../../../assets/js/skin_ai_system/dist/lrz.all.bundle.js" ></script>
+		<script type="text/javascript" src="../../../assets/js/skin_ai_system/layer.js" ></script>
+		<script type="text/javascript" src="../../../assets/js/ai_qa/user_ask_question.js" ></script>
+	</body>
+</html>

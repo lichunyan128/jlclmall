@@ -1,0 +1,161 @@
+html,body{width: 100%;font-family: "微软雅黑";font-size: 12px;background:#f0f0f0;color: #3e3a38;}
+body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, input, abbr, article, aside, figcaption, fieldset, figure, footer, header, mark, meter, menu, nav, output, progress, section, summary, time
+{list-style: none;margin: 0;padding: 0; }
+iframe, a, img, button { border: 0; }
+.clearfix:after {    
+    visibility: hidden;    
+    display: block;    
+    font-size: 0;    
+    content: " ";    
+    clear: both;    
+    height: 0;    
+} 
+a{color: #aeadb2;text-decoration: none;}
+.flx-space {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	flex-wrap:wrap;
+}
+.flx-start {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.flx-center {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+/*skin_base_conditions*/
+.banner{
+	width:100%;height:161px;
+	background: url(../../img/skin_ai_system/skin_base_conditions_banner.png)no-repeat;
+	background-size:100% 100%;
+}
+.container{
+	width:95%;height: 100%;
+	margin:0 auto;
+	position: relative;
+}
+.survey_box{
+	width:47%;height:251px;
+	background: #ffffff;
+	float: left;
+	margin-top:6%;
+}
+.survey_left_box{
+	margin-left:6%;
+}
+.analyze_btn_outer{
+	width:150px;height:150px;
+	border-radius:50%;
+	background:#f0f0f0;
+	position: absolute;
+	margin-left:-75px;margin-top:-75px;
+	top: 50%;
+	left:50%;
+}
+.analyze_btn_core{
+	width:120px;height:120px;
+	border-radius:50%;
+	background:#999999;
+	text-align: center;
+	line-height:120px;
+	margin: 10% auto;
+	color: #ffffff;
+	font-size:20px;
+}
+.analyze_btn_core_red{
+	width:120px;height:120px;
+	border-radius:50%;
+	text-align: center;
+	line-height:120px;
+	margin: 10% auto;
+	color: #ffffff;
+	font-size:20px;
+	background:#f8a4a8;
+	display: none;
+}
+.narrate_pic{
+	width:45px;height:45px;
+	margin:45px auto;
+	position:relative;
+}
+.narrate_pic img{width: 100%;}
+.narrate{
+	width:78%;
+	margin:0 auto;
+	text-align:center;
+	color:#d4d4d4;
+}
+.narrate_title{
+	font-size:18px;
+	color:#2f2725;
+	margin-top:-38px;
+}
+.pimple_pic{
+	width: 60px;
+}
+.narrate_pic .water_red,.pimple_red,.care_red,.pimple_red_5{
+	position:absolute;
+	top: 1px;
+	display:none;
+}
+
+/*弹出框*/
+.mui-popover.mui-popover-action .mui-table-view{
+	margin-top:4px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	border-radius:0px;
+}
+.mui-popover .mui-table-view{
+	border-radius:0px;
+}
+.mui-table-view .age_pop_title{
+	height:60px;
+	line-height:37px;
+	color:#f8a4a8;
+	font-size: 19px;
+}
+.mui-table-view-cell{
+	font-size:16px;
+}
+.mui-table-view-cell .popup_choose_butn{
+	font-size:17px;color:#000000;
+}
+
+
+
+/*end*/
+
+
+
+
+
+
+
+
+
+
+

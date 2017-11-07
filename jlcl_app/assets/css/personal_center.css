@@ -1,0 +1,18 @@
+.user{position: relative;}
+.user img{width: 100%;}
+.user ul{width:30%;height:113px;margin-left:15px;color: white;}
+.headPick{position: absolute;top: 10%;text-align: center;}
+.headPick li:last-child{margin-top: 10px;}
+.headPick li img{width: 100%;}
+.brief{ position: absolute;left:61%;top: 26%;font-size: 12px;}
+.brief li{width:100%;border-bottom: 1px solid  #858482;line-height:30px;}
+.brief li span{margin-left:3px;}
+
+.personalmessage{width: 100%;color: #4e4e4e;font-family: "微软雅黑";font-size: 13px;margin-top:4px;}
+.personalmessage li{height:30px;background: white;padding-left:14px;line-height:30px;border-bottom:1px solid #ececec ;position: relative;}
+.personalmessage a:nth-child(3) li{margin-top:5px;}
+.personalmessage a:nth-child(4) li{margin-top:5px;}
+.personalmessage a:nth-child(6) li{margin-top:5px;}
+.personalmessage a:nth-child(9) li{margin-top:5px;}
+.personalmessage li span{position: absolute;left:91%;}
+.personalmessage a{text-decoration: none;color:#4c4c4c;}

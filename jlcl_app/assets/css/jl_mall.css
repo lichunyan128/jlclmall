@@ -1,0 +1,19 @@
+html,body{background: white;}
+.top{width: 100%;height:22px;font-size:14px;background: #77161d;color: white;line-height:22px;margin-bottom:4px;}
+.top span{margin-left:11px;}
+.pictur{width: 100%;text-align: center;}
+.pictur li{width: 49.9%;border: 1PX solid #f7f6f6;}
+.pictur li:nth-of-type(odd){float: left;}
+.pictur li:nth-of-type(even){float: right;}
+.pictur li img{width: 100%;}
+.img_introduce p{width: 100%;text-align: center;font-size: 12px;}
+.img_introduce{width: 100%;height: 80px;margin-top: 4px;margin-left: 0px;}
+.introduce_text{height: 42px;margin-left: 7px;margin-top: 5px;}
+.introduce_text p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.priceShow{line-height: 26px;display: flex;justify-content: center;}
+.nowPrice{font-size: 14px;color: #6b1715;font-weight: bold;font-family: "微软雅黑";}
+.formPrice{text-decoration: line-through;margin-left:5px;font-size: 12px;font-weight: bold;font-family: "微软雅黑";color: #8e8886;}
+@media only screen and (min-device-width: 375px) and (max-device-width: 414px) and (orientation : portrait) {
+.pictur li{width:50%;border: 1PX solid #f7f6f6;}
+}
+

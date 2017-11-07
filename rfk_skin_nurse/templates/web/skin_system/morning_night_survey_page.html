@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1">
+		<title>早晚页</title>
+		<link rel="stylesheet" href="../../../assets/css/common/mui.min.css" />
+		<style>
+			html,body{height: 100%;font-family: "微软雅黑";color:#8f815e;background: white;}
+			a,p{color: #727171;}
+			.choose{width: 70%;height:auto;margin-left:15%;}			
+			.choose_texts{font-size: 20px;width: 55%;height: 51px;line-height: 51px;margin-left: 12%;}
+			.font_discolor{color: white;}
+			
+			/*早晚*/
+			.night_log{position: relative;}
+			.morning_log{position: relative;}
+			.background_time_logo{width: 48%;height:24%;margin-top: 10px;}
+			.background_time_logo img{width: 35%;margin: 10% 20%;}
+			.background_time_night{font-size: 22px;position: absolute;top: 47%;left: 62%;}
+			.background_time_morning{font-size: 22px;position: absolute;top: 49%;left: 69%;}
+			/*弹出框*/
+			.mui-popover .mui-table-view{width: 95%;text-align: center;margin: 0 auto;background: white;}
+			.mui-table-view-cell>a:not(.mui-btn).mui-active{background-color:#5c522f;}
+			
+			.popup_choose_butn{width: 100%;height: 35px;font-size: 20px;line-height: 35px;}
+			.mui-popover.mui-popover-action .mui-table-view {color:#8f815e;}
+			.mui-table-view-cell.mui-active{background-color:#5c522f;}
+			.mui-table-view-cell:after{background-color:#5c522f;}
+			.popup_hide{text-align: center;margin-top: 7px;font-size: 15px;font-weight: 500;display: none;}
+			@media only screen and (min-width: 320px) and (max-width: 360px) {
+				.popup_hide{margin-top: 2px;}
+			}
+			.choose .first_button{margin-top:0;}
+			.choose_texts{text-align: center;margin: 0 auto;height: 40px;line-height:40px;}
+			.choose_button{margin-top: 11%;}
+			.choose_button{width: 100%;height:40px;border: 1px solid #727171;border-radius: 8px;}
+			.choose_button_hover{width: 100%;height:40px; background:#727171;border-radius: 8px;}
+			
+			/*弹出提交框*/
+			.button_case{background:rgba(84,79, 77, 0.3);position:fixed;bottom: 0;width: 100%;height:46px;}
+			.distance_bottom{margin-bottom: 80px;}
+			.submit{margin: 3px 15%;width:70%;height: 40px;border:1px solid #747373;color:#2f2725;font-size: 18px;}
+		</style>
+	</head>
+	<body>
+		<section class="container_box  container distance_bottom">
+			<!--晚上-->
+			<p class="background_time_logo night_log">
+				<img src="../../../assets/img/rfk_skin_system_night_survey_page_logo.png" />
+				<span class="background_time_night">晚上</span>
+			</p>
+			<section class="choose night">
+				<div class="choose_button first_button">
+					<a href="#picture1"><p class="choose_texts" careList = "cleanser">洁面</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+
+				<div class="choose_button">
+					<a href="#picture2"><p class="choose_texts" careList = "skinWater">水</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+
+				<div class="choose_button">
+					<a href="#picture3"><p class="choose_texts" careList = "essence">精华</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+
+				<div class="choose_button">
+					<a href="#picture4"><p class="choose_texts" careList = "emulsion">乳液</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+
+				<div class="choose_button" data-index='5'>
+					<a href="#picture5"><p class="choose_texts" careList = "eyeCream">眼霜</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+
+				<div class="choose_button">
+					<a href="#picture6"><p class="choose_texts" careList = "cream">霜</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+				<div class="choose_button">
+					<a href="#picture7"><p class="choose_texts" careList = "mask">面膜</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+			</section>
+			
+			
+			<!--早上-->
+			<p class="background_time_logo morning_log">
+				<img src="../../../assets/img/rfk_skin_system_morning_survey_page_logo.png" />
+				<span class="background_time_morning">早上</span>
+			</p>
+			<section class="choose moring">
+				<div class="choose_button first_button">
+					<a href="#picture1"><p class="choose_texts" careList = "cleanser">洁面</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+
+				<div class="choose_button">
+					<a href="#picture2"><p class="choose_texts" careList = "skinWater">水</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+
+				<div class="choose_button">
+					<a href="#picture3"><p class="choose_texts" careList = "essence">精华</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+
+				<div class="choose_button">
+					<a href="#picture4"><p class="choose_texts" careList = "emulsion">乳液</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+
+				<div class="choose_button">
+					<a href="#picture5"><p class="choose_texts" careList = "eyeCream">眼霜</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+
+				<div class="choose_button">
+					<a href="#picture6"><p class="choose_texts" careList = "cream">霜</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+				<div class="choose_button">
+					<a href="#picture7"><p class="choose_texts" careList = "mask">面膜</p><a/>
+					<p class="popup_hide"></p>
+				</div>
+			</section>
+				
+			<!--弹出框-->
+			<!--洁面-->
+			<div id="picture1" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view ">
+					<li class="mui-table-view-cell">
+						<a href="#picture1"><p class="popup_choose_butn" value="1">泡沫</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture1"><p class="popup_choose_butn" value="2">非泡沫</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture1"><p class="popup_choose_butn" value="3">清水洁面</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture1"><p class="popup_choose_butn" value="0">不使用</p></a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture1"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			<!--水-->
+			<div id="picture2" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture2"><p class="popup_choose_butn" value="1">使用</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture2"><p class="popup_choose_butn" value="0">不使用</p></a>
+					</li>
+				</ul>
+				
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture2"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			<!--精华-->
+			<div id="picture3" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture3"><p class="popup_choose_butn" value="1">使用</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture3"><p class="popup_choose_butn" value="0">不使用</p></a>
+					</li>
+				</ul>
+				
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture3"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			<!--乳液-->
+			<div id="picture4" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture4"><p class="popup_choose_butn" value="1">稀（易流动）</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture4"><p class="popup_choose_butn" value="2">稠（不易流动）</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture4"><p class="popup_choose_butn" value="0">不使用</p></a>
+					</li>
+				</ul>
+				
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture4"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			<!--眼霜-->
+			<div id="picture5" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture5"><p class="popup_choose_butn" value="1">使用</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture5"><p class="popup_choose_butn" value="0">不使用</p></a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture5"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			<!--霜-->
+			<div id="picture6" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture6"><p class="popup_choose_butn" value="1">稀（易流动）</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture6"><p class="popup_choose_butn" value="2">稠（不易流动）</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture6"><p class="popup_choose_butn" value="0">不使用</p></a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture6"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			<!--面膜-->
+			<div id="picture7" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture7"><p class="popup_choose_butn" value="1">面膜巾&贴片面膜</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture7"><p class="popup_choose_butn" value="2">晚安面膜&免洗面膜</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#picture7"><p class="popup_choose_butn" value="0">不使用</p></a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture7"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			<!--提交框-->
+			<div class="button_case">
+				<button type="button" class="submit">提交</button>
+			</div>
+		</section><!--box结束-->
+		<script type="text/javascript" src="../../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script type="text/javascript" src="../../../assets/js/common/mui.min.js" ></script>
+		<script type="text/javascript" src="../../../assets/js/morning_night_survey_page.js" ></script>
+	</body>
+</html>

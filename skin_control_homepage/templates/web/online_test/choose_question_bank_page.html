@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1"/>
+		<title>选择考试题型</title>
+		<link rel="stylesheet" href="../../../assets/css/common/mui.min.css" />
+		<style>
+		html,body{width: 100%;height: 100%; font-family: "微软雅黑";background: linear-gradient(to bottom right,#f4e5c8 ,#efd8ae)}
+			nav img{width: 100%;display: block;}
+			.banner{height: 47px;background:#66503b;line-height: 47px;color:#f1dbb6;text-align: center;font-size: 23px;}
+			.choose{width: 70%;margin: 0 auto;}
+			.choose_texts{text-align: center;margin: 0 auto;height: 49px;line-height:49px;font-size: 15px;color: #66503b;}
+			.choose_button{margin-top: 10%;}
+			.choose_button{width: 100%;height:50px; background:url(../../../assets/img/skin_control_homepage_online_test_choose_question_bank_page_click_ago.png) no-repeat;background-size:100% 50px;}
+			.choose_button_hover{width: 100%;height:50px;background:url(../../../assets/img/skin_control_homepage_online_test_choose_question_bank_page_click_later.png) no-repeat;background-size:100% 50px;}
+			.font_discolor{color: #efd8ae;}
+			.hint{color: #b3a286;margin-top: 11%;width: 100%;font-size: 17px;text-align: center;}
+			.submit{width:100%;height:50px;background:url(../../../assets/img/skin_control_homepage_online_test_choose_question_bank_page_click_ago.png) no-repeat;background-size:100% 50px;
+				color:#66503;font-size: 18px;margin-top: 5px;margin-bottom: 5px;border: none;}
+				
+			@media only screen and (min-width: 360px) and (max-width: 375px) {
+				.choose_button{margin-top: 8%;}
+				.hint{font-size: 16px;}
+			}
+			@media only screen and (min-width: 320px) and (max-width: 320px) {
+				.choose_button{margin-top: 4%;}
+				.hint{font-size: 15px;}
+			}
+				
+		</style>
+	</head>
+	<body>
+		<nav>
+			<img src="../../../assets/img/skin_control_homepage_online_test_choose_question_bank_page_banner.png" />
+		</nav>
+		<section class="banner">请选择考试题库</section>
+		<section class="choose">
+			<div class="choose_button">
+				<p class="choose_texts">聚力-美容培训班报名考试</p>
+			</div>
+
+			<div class="choose_button">
+				<p class="choose_texts">聚力-初级美容顾问资格考试</p>
+			</div>
+
+			<div class="choose_button">
+				<p class="choose_texts">聚力-高级美容顾问资格考试</p>
+			</div>
+
+			<div class="choose_button">
+				<p class="choose_texts">聚力-美容导师资格考试</p>
+			</div>
+			<div class="hint">所选题库核对无误后，请提交</div>
+			<button type="button" class="submit" id="submit">提交</button>
+		</section>
+		
+		
+		<script type="text/javascript" src="../../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script>
+			$('.choose_button').click(function(){
+				$('.choose').find('div').removeClass('choose_button_hover');
+				$('.choose').find('.choose_texts').removeClass('font_discolor');
+				$(this).addClass('choose_button_hover');
+				$(this).find('.choose_texts').addClass('font_discolor');
+			})
+//			提交
+			$('#submit').click(function(){
+				$(this).removeClass('.submit');
+				$(this).css({'background':'#66503c','color':'#efd8ae'});
+				
+			})
+		</script>
+		
+		
+	</body>
+</html>

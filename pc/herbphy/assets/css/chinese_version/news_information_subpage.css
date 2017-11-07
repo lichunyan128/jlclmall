@@ -1,0 +1,71 @@
+.swiper-container {
+    width: 27.9%;
+    margin-top: 98px;
+    margin-left:22% ;
+    }
+.swiper-container img{
+	display: block;
+	width: 100%;
+	}
+.swiper-container .swiper-pagination{
+	left: -27.5%;
+	}
+.swiper-container .swiper-pagination-bullet{
+	width: 13px;
+	height: 13px;
+	background:#fff;
+	opacity: 1;}
+.swiper-container .swiper-pagination-bullet-active{
+	background:#523a22;
+	}
+.context{
+	position: absolute;top: 0px;left: 54%;width: 26%;
+}
+.context p{text-align: right;}
+@font-face { 
+	font-family:FZLTZCHK;
+	src: url(../../fonts/FZLTZCHK.TTF);
+} 
+.textTitle{
+	font-family: FZLTZCHK, sans-serif;
+	font-size: 29px;color: #523922;font-weight: 200;
+	border-bottom: 1px solid #a0a0a0;padding-bottom: 17px;
+}
+@font-face { 
+	font-family:FZLTCXHJW;
+	src: url(../../fonts/FZLTCXHJW_0.TTF);
+} 
+.en_name{
+	font-family: FZLTCXHJW, sans-serif;
+	font-size: 20px;color: #523922;font-weight: 800;
+	padding-top: 10px;
+}
+.en_name_first{
+	padding-top: 17px;
+}
+@font-face { 
+	font-family:FZLTCXHJW_0;
+	src: url(../../fonts/FZLTCXHJW_0.TTF);
+} 
+.cn_name{
+	font-family: FZLTCXHJW_0, sans-serif;
+	font-size: 18px;color: #523922;
+	padding-top: 10px;font-weight: 800;
+}
+.cn_name_size{
+	font-size: 16px;padding-bottom: 17px;
+}
+.context .intro{
+	text-align: right;
+	font-family: FZLTCXHJW_0, sans-serif;
+	font-size: 14px;color: #523922;line-height: 25px;
+	border-top: 1px solid #a0a0a0;padding-top: 17px;
+	font-weight: 800;margin-bottom: 40%;
+}
+.context .intro p{
+	margin-top: 30px;
+}
+
+
+
+

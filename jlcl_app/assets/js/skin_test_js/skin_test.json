@@ -1,0 +1,680 @@
+{
+    "result": [
+        {
+            "id": 3,
+            "title": "敏感性／耐受性测试",
+            "remark": "  【全球皮肤科医生最信赖的皮肤分类】\r\n通过回答这部分的问题，可以准确分析出你的皮肤趋向于发生各种敏感肌肤症状的程度。",
+            "question": [
+                {
+                    "id": 24,
+                    "answer": [
+                        {
+                            "id": 101,
+                            "survey_question_id": 24,
+                            "score": 1,
+                            "answer": "A. 从不"
+                        },
+                        {
+                            "id": 102,
+                            "survey_question_id": 24,
+                            "score": 2,
+                            "answer": "B. 很少"
+                        },
+                        {
+                            "id": 103,
+                            "survey_question_id": 24,
+                            "score": 3,
+                            "answer": "C. 每月至少出现一次"
+                        },
+                        {
+                            "id": 104,
+                            "survey_question_id": 24,
+                            "score": 4,
+                            "answer": "D. 每周至少出现一次"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q1. 你的脸经常会发红过敏（灼热、发痒、刺痛）吗：",
+                    "tip": "一言不合就过敏，美修帮你来分析！"
+                },
+                {
+                    "id": 25,
+                    "answer": [
+                        {
+                            "id": 105,
+                            "survey_question_id": 25,
+                            "score": 1,
+                            "answer": "A. 从不"
+                        },
+                        {
+                            "id": 106,
+                            "survey_question_id": 25,
+                            "score": 2,
+                            "answer": "B. 很少"
+                        },
+                        {
+                            "id": 107,
+                            "survey_question_id": 25,
+                            "score": 3,
+                            "answer": "C. 经常"
+                        },
+                        {
+                            "id": 108,
+                            "survey_question_id": 25,
+                            "score": 4,
+                            "answer": "D. 总是如此"
+                        },
+                        {
+                            "id": 109,
+                            "survey_question_id": 25,
+                            "score": 2.5,
+                            "answer": "E. 我从不使用护肤品"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q2. 护肤产品会使你的面部出现潮红、发痒或是刺痛吗："
+                },
+                {
+                    "id": 26,
+                    "answer": [
+                        {
+                            "id": 110,
+                            "survey_question_id": 26,
+                            "score": 1,
+                            "answer": "A. 没有"
+                        },
+                        {
+                            "id": 111,
+                            "survey_question_id": 26,
+                            "score": 2,
+                            "answer": "B. 没去看过，但朋友或熟人说我有"
+                        },
+                        {
+                            "id": 112,
+                            "survey_question_id": 26,
+                            "score": 3,
+                            "answer": "C. 是的，不过不严重"
+                        },
+                        {
+                            "id": 113,
+                            "survey_question_id": 26,
+                            "score": 4,
+                            "answer": "D. 是的，而且症状严重"
+                        },
+                        {
+                            "id": 114,
+                            "survey_question_id": 26,
+                            "score": 2.5,
+                            "answer": "E. 不确定"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q3. 曾被诊断为痤疮或玫瑰痤疮吗："
+                },
+                {
+                    "id": 27,
+                    "answer": [
+                        {
+                            "id": 115,
+                            "survey_question_id": 27,
+                            "score": 1,
+                            "answer": "A. 从来不过敏"
+                        },
+                        {
+                            "id": 116,
+                            "survey_question_id": 27,
+                            "score": 2,
+                            "answer": "B. 偶尔过敏"
+                        },
+                        {
+                            "id": 117,
+                            "survey_question_id": 27,
+                            "score": 3,
+                            "answer": "C. 对大多数过敏"
+                        },
+                        {
+                            "id": 118,
+                            "survey_question_id": 27,
+                            "score": 4,
+                            "answer": "D. 对所有都过敏"
+                        },
+                        {
+                            "id": 119,
+                            "survey_question_id": 27,
+                            "score": 2.5,
+                            "answer": "E. 不确定"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q4. 你对金属首饰过敏吗？"
+                },
+                {
+                    "id": 28,
+                    "answer": [
+                        {
+                            "id": 120,
+                            "survey_question_id": 28,
+                            "score": 1,
+                            "answer": "A.从不"
+                        },
+                        {
+                            "id": 121,
+                            "survey_question_id": 28,
+                            "score": 2,
+                            "answer": "B. 很少"
+                        },
+                        {
+                            "id": 122,
+                            "survey_question_id": 28,
+                            "score": 3,
+                            "answer": "C. 经常"
+                        },
+                        {
+                            "id": 123,
+                            "survey_question_id": 28,
+                            "score": 4,
+                            "answer": "D. 总是"
+                        },
+                        {
+                            "id": 124,
+                            "survey_question_id": 28,
+                            "score": 2.5,
+                            "answer": "E. 我从不使用防晒剂"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q5. 防晒产品令你的皮肤发痒、刺痛、发红吗？"
+                },
+                {
+                    "id": 29,
+                    "answer": [
+                        {
+                            "id": 125,
+                            "survey_question_id": 29,
+                            "score": 1,
+                            "answer": "A. 没有"
+                        },
+                        {
+                            "id": 126,
+                            "survey_question_id": 29,
+                            "score": 2,
+                            "answer": "B. 朋友或熟人说我有"
+                        },
+                        {
+                            "id": 127,
+                            "survey_question_id": 29,
+                            "score": 3,
+                            "answer": "C. 是的，不过不严重"
+                        },
+                        {
+                            "id": 128,
+                            "survey_question_id": 29,
+                            "score": 4,
+                            "answer": "D. 是的，而且症状严重"
+                        },
+                        {
+                            "id": 129,
+                            "survey_question_id": 29,
+                            "score": 2.5,
+                            "answer": "E. 不确定"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q6. 曾被诊断为局部性皮炎、湿疹、或接触性皮炎吗？"
+                },
+                {
+                    "id": 30,
+                    "answer": [
+                        {
+                            "id": 130,
+                            "survey_question_id": 30,
+                            "score": 1,
+                            "answer": "A. 从不"
+                        },
+                        {
+                            "id": 131,
+                            "survey_question_id": 30,
+                            "score": 2,
+                            "answer": "B. 很少"
+                        },
+                        {
+                            "id": 132,
+                            "survey_question_id": 30,
+                            "score": 3,
+                            "answer": "C. 经常"
+                        },
+                        {
+                            "id": 133,
+                            "survey_question_id": 30,
+                            "score": 4,
+                            "answer": "D. 总是发红"
+                        },
+                        {
+                            "id": 134,
+                            "survey_question_id": 30,
+                            "score": 2.5,
+                            "answer": "E. 我不戴戒指"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q7. 你佩带戒指的皮肤部位发红的几率"
+                },
+                {
+                    "id": 31,
+                    "answer": [
+                        {
+                            "id": 135,
+                            "survey_question_id": 31,
+                            "score": 1,
+                            "answer": "A. 从不"
+                        },
+                        {
+                            "id": 136,
+                            "survey_question_id": 31,
+                            "score": 2,
+                            "answer": "B. 很少"
+                        },
+                        {
+                            "id": 137,
+                            "survey_question_id": 31,
+                            "score": 3,
+                            "answer": "C. 经常"
+                        },
+                        {
+                            "id": 138,
+                            "survey_question_id": 31,
+                            "score": 4,
+                            "answer": "D. 总是"
+                        },
+                        {
+                            "id": 139,
+                            "survey_question_id": 31,
+                            "score": 2.5,
+                            "answer": "E. 我从不使用这类产品"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q8. 按摩油或是身体润肤霜会令你的皮肤长痘痘、发痒、或感觉干燥"
+                },
+                {
+                    "id": 32,
+                    "answer": [
+                        {
+                            "id": 140,
+                            "survey_question_id": 32,
+                            "score": 1,
+                            "answer": "A. 是的"
+                        },
+                        {
+                            "id": 141,
+                            "survey_question_id": 32,
+                            "score": 2,
+                            "answer": "B. 大部分时候没什么"
+                        },
+                        {
+                            "id": 142,
+                            "survey_question_id": 32,
+                            "score": 3,
+                            "answer": "C. 不行，我的皮肤会发红发痒"
+                        },
+                        {
+                            "id": 143,
+                            "survey_question_id": 32,
+                            "score": 4,
+                            "answer": "D. 从来不使用，因为被坑过"
+                        },
+                        {
+                            "id": 144,
+                            "survey_question_id": 32,
+                            "score": 2.5,
+                            "answer": "E. 我总是用自己带的这些东西，所以不确定"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q9. 使用酒店里提供的香皂洗脸或洗澡，却没什么问题："
+                },
+                {
+                    "id": 33,
+                    "answer": [
+                        {
+                            "id": 145,
+                            "survey_question_id": 33,
+                            "score": 1,
+                            "answer": "A. 没有"
+                        },
+                        {
+                            "id": 146,
+                            "survey_question_id": 33,
+                            "score": 2,
+                            "answer": "B. 一个"
+                        },
+                        {
+                            "id": 147,
+                            "survey_question_id": 33,
+                            "score": 3,
+                            "answer": "C. 好几个"
+                        },
+                        {
+                            "id": 148,
+                            "survey_question_id": 33,
+                            "score": 4,
+                            "answer": "D. 很多家人都是"
+                        },
+                        {
+                            "id": 149,
+                            "survey_question_id": 33,
+                            "score": 2.5,
+                            "answer": "E. 不确定"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q10. 您的家人中有人被诊断为过敏体质（如局部性皮炎、湿疹、气喘、过敏）",
+                    "tip": "太棒啦！测试已经过半，坚持到最后哟！"
+                },
+                {
+                    "id": 34,
+                    "answer": [
+                        {
+                            "id": 150,
+                            "survey_question_id": 34,
+                            "score": 1,
+                            "answer": "A. 没有特殊反应"
+                        },
+                        {
+                            "id": 151,
+                            "survey_question_id": 34,
+                            "score": 2,
+                            "answer": "B. 感觉有点干"
+                        },
+                        {
+                            "id": 152,
+                            "survey_question_id": 34,
+                            "score": 3,
+                            "answer": "C. 皮肤发痒"
+                        },
+                        {
+                            "id": 153,
+                            "survey_question_id": 34,
+                            "score": 4,
+                            "answer": "D. 皮肤发痒发红"
+                        },
+                        {
+                            "id": 154,
+                            "survey_question_id": 34,
+                            "score": 2.5,
+                            "answer": "E. 不确定，我从不用这些东西"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q11. 皮肤接触有香料的洗衣液或是柔顺剂时，你的皮肤会？"
+                },
+                {
+                    "id": 35,
+                    "answer": [
+                        {
+                            "id": 155,
+                            "survey_question_id": 35,
+                            "score": 1,
+                            "answer": "A. 从不"
+                        },
+                        {
+                            "id": 156,
+                            "survey_question_id": 35,
+                            "score": 2,
+                            "answer": "B. 有时"
+                        },
+                        {
+                            "id": 157,
+                            "survey_question_id": 35,
+                            "score": 3,
+                            "answer": "C. 经常"
+                        },
+                        {
+                            "id": 158,
+                            "survey_question_id": 35,
+                            "score": 4,
+                            "answer": "D. 总是如此"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q12. 适度运动后或情绪波动大时，你的面部会变红吗？"
+                },
+                {
+                    "id": 36,
+                    "answer": [
+                        {
+                            "id": 159,
+                            "survey_question_id": 36,
+                            "score": 1,
+                            "answer": "A. 从不"
+                        },
+                        {
+                            "id": 160,
+                            "survey_question_id": 36,
+                            "score": 2,
+                            "answer": "B. 有时"
+                        },
+                        {
+                            "id": 161,
+                            "survey_question_id": 36,
+                            "score": 3,
+                            "answer": "C. 经常"
+                        },
+                        {
+                            "id": 162,
+                            "survey_question_id": 36,
+                            "score": 4,
+                            "answer": "D. 一喝就脸红"
+                        },
+                        {
+                            "id": 163,
+                            "survey_question_id": 36,
+                            "score": 2.5,
+                            "answer": "E. 我从不喝酒"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q13. 你喝酒后会脸红吗？"
+                },
+                {
+                    "id": 37,
+                    "answer": [
+                        {
+                            "id": 164,
+                            "survey_question_id": 37,
+                            "score": 1,
+                            "answer": "A. 从不"
+                        },
+                        {
+                            "id": 165,
+                            "survey_question_id": 37,
+                            "score": 2,
+                            "answer": "B. 有时"
+                        },
+                        {
+                            "id": 166,
+                            "survey_question_id": 37,
+                            "score": 3,
+                            "answer": "C. 经常"
+                        },
+                        {
+                            "id": 167,
+                            "survey_question_id": 37,
+                            "score": 4,
+                            "answer": "D. 总是这样"
+                        },
+                        {
+                            "id": 168,
+                            "survey_question_id": 37,
+                            "score": 2.5,
+                            "answer": "E. 我从不吃辣（如果是因为怕皮肤发红请选D）"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q14. 您吃完辣或烫的食物/饮料后皮肤会出现发红的情况吗？"
+                },
+                {
+                    "id": 38,
+                    "answer": [
+                        {
+                            "id": 169,
+                            "survey_question_id": 38,
+                            "score": 1,
+                            "answer": "A. 没有"
+                        },
+                        {
+                            "id": 170,
+                            "survey_question_id": 38,
+                            "score": 2,
+                            "answer": "B. 鼻翼两侧有少量"
+                        },
+                        {
+                            "id": 171,
+                            "survey_question_id": 38,
+                            "score": 3,
+                            "answer": "C. 鼻翼和脸颊都有"
+                        },
+                        {
+                            "id": 172,
+                            "survey_question_id": 38,
+                            "score": 4,
+                            "answer": "D. 很多，全脸到处都是"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q15. 你的脸上哪些部位有红血丝呢？"
+                },
+                {
+                    "id": 39,
+                    "answer": [
+                        {
+                            "id": 173,
+                            "survey_question_id": 39,
+                            "score": 1,
+                            "answer": "A. 从不"
+                        },
+                        {
+                            "id": 174,
+                            "survey_question_id": 39,
+                            "score": 2,
+                            "answer": "B. 有时"
+                        },
+                        {
+                            "id": 175,
+                            "survey_question_id": 39,
+                            "score": 3,
+                            "answer": "C. 经常"
+                        },
+                        {
+                            "id": 176,
+                            "survey_question_id": 39,
+                            "score": 4,
+                            "answer": "D. 是这样"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q16. 从照片上看，你的脸看上去发红吗："
+                },
+                {
+                    "id": 40,
+                    "answer": [
+                        {
+                            "id": 177,
+                            "survey_question_id": 40,
+                            "score": 1,
+                            "answer": "A. 从不"
+                        },
+                        {
+                            "id": 178,
+                            "survey_question_id": 40,
+                            "score": 2,
+                            "answer": "B. 有时"
+                        },
+                        {
+                            "id": 179,
+                            "survey_question_id": 40,
+                            "score": 3,
+                            "answer": "C. 总是这样"
+                        },
+                        {
+                            "id": 180,
+                            "survey_question_id": 40,
+                            "score": 4,
+                            "answer": "D. 我经常被晒伤"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q17. 人们会问你是不是被晒伤了，即使你没有晒太阳？"
+                },
+                {
+                    "id": 41,
+                    "answer": [
+                        {
+                            "id": 181,
+                            "survey_question_id": 41,
+                            "score": 1,
+                            "answer": "A. 从不"
+                        },
+                        {
+                            "id": 182,
+                            "survey_question_id": 41,
+                            "score": 2,
+                            "answer": "B. 有时"
+                        },
+                        {
+                            "id": 183,
+                            "survey_question_id": 41,
+                            "score": 3,
+                            "answer": "C. 经常"
+                        },
+                        {
+                            "id": 184,
+                            "survey_question_id": 41,
+                            "score": 4,
+                            "answer": "D. 总是这样"
+                        },
+                        {
+                            "id": 185,
+                            "survey_question_id": 41,
+                            "score": 2.5,
+                            "answer": "E. 我从不用这些东西(如果不用是因为曾经发生过以上症状，请选D)"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q18. 您使用化妆品、防晒霜或护肤品后会出现发生发红、发痒或水肿？"
+                },
+                {
+                    "id": 75,
+                    "answer": [
+                        {
+                            "id": 333,
+                            "survey_question_id": 75,
+                            "score": 5,
+                            "answer": "A. 皮肤科医生"
+                        },
+                        {
+                            "id": 334,
+                            "survey_question_id": 75,
+                            "score": 2,
+                            "answer": "B. 其他医生"
+                        },
+                        {
+                            "id": 335,
+                            "survey_question_id": 75,
+                            "score": 0,
+                            "answer": "C. 都没有"
+                        }
+                    ],
+                    "survey_title_id": 3,
+                    "question": "Q19.你曾被皮肤科医生或者其他医生确诊为痤疮、玫瑰痤疮、接触性皮炎或湿疹吗？（偶尔冒痘不算入其中哟）",
+                    "tip": "敏感肌因为分值特殊，处于临界值，很容易从轻度敏感肌被流放到重度敏感肌，但是修宝们不要着急，根据自己的皮肤状况综合判断。偏差很大的请留言，修修酱会与您一起解决这个问题！"
+                }
+            ]
+        }
+    ],
+    "ret": 0,
+    "msg": ""
+}
+
+
+

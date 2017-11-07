@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>肌肤调查</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1" />
+		<link rel="stylesheet" href="../../assets/css/common/mui.min.css" />
+		<link rel="stylesheet" href="../../assets/css/skin_ai_system/skin_ai_system.css" />
+	</head>
+	<body>
+		<div class="banner"></div>
+		<div class="container">
+			<div class="survey_btn_box mui-clearfix">
+				<div class="survey_box">
+					<div class="narrate_pic">
+						<a href="#picture1"><img src="../../assets/img/skin_ai_system/skin_base_conditions_age.png" /><a/>
+					</div>
+					<div class="narrate">
+						<p class="narrate_title">年龄</p>
+						<p>年龄只是个数字<br/>你自己心里最知道！</p>
+					</div>
+				</div>
+				<div class="survey_box survey_left_box">
+					<div class="narrate_pic">
+						<img class="water_grey" src="../../assets/img/skin_ai_system/skin_base_conditions_jfsf_grey.png" />
+						<a href="#picture2"><img class="water_red" src="../../assets/img/skin_ai_system/skin_base_conditions_jfsf_red.png" /></a>
+					</div>
+					<div class="narrate">
+						<p class="narrate_title">肌肤水分</p>
+						<p>是能拧出水的水嫩萌妹纸还是撒哈拉大沙漠，测测就知道</p>
+					</div>
+				</div>
+				<div class="survey_box">
+					<div class="narrate_pic pimple_pic">
+						<img class="pimple_grey" src="../../assets/img/skin_ai_system/skin_base_conditions_dd_grey.png" />
+						<a href="#picture3"><img class="pimple_red" src="../../assets/img/skin_ai_system/skin_base_conditions_dd_red.png" /></a>
+						<a href="#picture5"><img class="pimple_red_5" src="../../assets/img/skin_ai_system/skin_base_conditions_dd_red.png" /></a>
+					</div>
+					<div class="narrate">
+						<p class="narrate_title">痘痘</p>
+						<p>月球表面or剥壳Q弹蛋白般光滑脸，你选一个吧！</p>
+					</div>
+				</div>
+				<div class="survey_box survey_left_box">
+					<div class="narrate_pic">
+						<img class="care_grey" src="../../assets/img/skin_ai_system/skin_base_conditions_hf_grey.png" />
+						<a href="#picture4"><img class="care_red" src="../../assets/img/skin_ai_system/skin_base_conditions_hf_red.png" /></a>
+					</div>
+					<div class="narrate">
+						<p class="narrate_title">护肤</p>
+						<p>你是spa级护肤女神还是邋遢“伪男人”，点开就了解！</p>
+					</div>
+				</div>
+			</div>
+			<div class="analyze_btn_outer">
+				<div class="analyze_btn_core">分析</div>
+				<div class="analyze_btn_core_red" id="analyze">分析</div>
+			</div>
+			
+			
+		</div><!--container-->
+		<!--年龄-->
+		<div id="picture1" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell age_pop_title">年龄</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">您所在的年龄阶段</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="twentyToFifty" conditionsButton="twentyToFifty" value="1">20-50岁</p>
+				</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="twelveToTwenty" conditionsButton="twelveToTwenty" value="2">12-20岁</p>
+				</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="twelveUnder" conditionsButton="twelveUnder" value="3">12岁以下</p>
+				</li>
+			</ul>
+		</div>
+		<!--肌肤水分-->
+		<div id="picture2" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell age_pop_title">肌肤水分</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">请您选择您的肌肤状况</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="skinNoDry" value="1">肌肤无干燥</p>
+				</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="skinDry" value="2">肌肤干燥</p>
+				</li>
+			</ul>
+		</div>
+		<!--有无痘痘-->
+		<div id="picture3" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell age_pop_title">痘痘</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">您的肌肤是否有暗疮(痘痘)</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="havePimple" value="1">有痘痘</p>
+				</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="nonePimple" value="2">无痘痘</p>
+				</li>
+			</ul>
+		</div>
+		
+		<!--护肤-->
+		<div id="picture4" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell age_pop_title">护肤</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">您之前怎么护肤的</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="unusedSkinCareProduct" value="1">未使用护肤品</p>
+				</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="usedSkinCareProduct" value="2">使用宝宝霜</p>
+				</li>
+			</ul>
+		</div>
+		<!--长没长过痘痘-->
+		<div id="picture5" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell age_pop_title">痘痘</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">您的肌肤是否有暗疮(痘痘)</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="hasPimple" value="1">长过痘痘</p>
+				</li>
+				<li class="mui-table-view-cell">
+					<p class="popup_choose_butn" id="hasNoPimple" value="2">未长过痘痘</p>
+				</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript" src="../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script type="text/javascript" src="../../assets/js/common/mui.min.js" ></script>
+		<script type="text/javascript" src="../../assets/js/skin_ai_system/skin_base_conditions.js" ></script>
+		<script>
+//			$('.pimple_pic').click(function (){
+//				console.log('1');
+//			})
+			
+		
+	
+			
+			
+			
+		</script>
+	</body>
+</html>

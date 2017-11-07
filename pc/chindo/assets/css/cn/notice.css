@@ -1,0 +1,108 @@
+/*notice page*/
+.container{
+	margin: 46px auto;
+	width: 90%;
+	min-width:1000px;
+	display: flex;
+}
+.container_left{
+	width: 50%;
+}
+.container_left img{
+	width:100%;
+	display: block;
+}
+.container_right{
+	width:48%;
+	height:438px;
+	margin-left: 15px;
+	border-top:1px solid;
+	border-bottom:1px solid;
+	overflow-y: auto;
+}
+.container_right h2{
+	font-size:16px;
+	font-weight:bold;
+}
+.container_right{
+	font-size:12px;
+	padding:26px 0px;
+}
+.container_right div{
+	margin-top: 6px;
+}
+.container_right div p{
+	margin-top: 1px;
+} 
+.clearWay{
+	border-bottom:1px solid;
+	padding-bottom: 26px;
+}
+.topLogo img{
+	width:40px;
+}
+.topLogo{
+	margin-bottom: 13px;
+}
+.topLogo *{
+	display: inline-block;
+	vertical-align:middle;
+}
+.topLogo span{
+	font-size:15px;
+	font-weight:600;	
+}
+li + li{
+	margin: 3px;
+	line-height:20px;
+}
+.gesture{
+	width:400px;
+}
+.gesture img{
+	width: 19%;
+}
+.gesture img:nth-child(2){
+	margin-left: 20px;
+}
+.gesture img:nth-child(3){
+	margin-left: 20px;
+}
+.mattersNeedAttention{
+	padding-top:26px;
+}
+
+/*brand page*/
+.braand_topLog{
+	font-size:15px;
+}
+@media only screen and (min-width: 1671px) and (max-width:1800px) {
+	.container_right{
+		height:385px;
+	}
+}
+@media only screen and (min-width: 1571px) and (max-width:1670px) {
+	.container_right{
+		height:354px;
+	}
+}
+@media only screen and (min-width: 1450px) and (max-width:1570px) {
+	.container_right{
+		height:338px;
+	}
+}
+@media only screen and (min-width: 1300px) and (max-width:1449px) {
+	.container_right{
+		height:314px;
+	}
+}
+@media only screen and (min-width: 1200px) and (max-width:1299px) {
+	.container_right{
+		height:269px;
+	}
+}
+@media only screen and (min-width: 400px) and (max-width:1199px) {
+	.container_right{
+		height:244px;
+	}
+}

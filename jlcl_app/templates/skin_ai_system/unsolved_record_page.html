@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1" />
+		<title>某个美容师未解决的肌肤档案</title>
+		<link rel="stylesheet" href="../../assets/css/common/mui.min.css" />
+		<link rel="stylesheet" href="../../assets/css/skin_ai_system/skin_stystem.css" />
+		<style>
+			header{width: 100%;height: 234px;background:url(../../assets/img/skin_system_banner1.jpg)no-repeat;
+					background-size: 100% 100%;}
+			.mui-scroll-wrapper{top: 211px;}
+			.mui-content{background:#f6f6f6 ;}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<nav></nav>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<section class="container">
+					
+							
+				</section>
+			</div>
+		</div>
+			
+		
+		<script type="text/javascript" src="../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script type="text/javascript" src="../../assets/js/common/mui.min.js" ></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			var id=0;
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					var template = 
+					'<div class="module_box">'
+						+'<div class="userId">'
+							+'<img src="../../assets/img/skin_system_solve_skin_problem.svg"/>'
+							+'<span>客户编号：HB20170001</span>'
+						+'</div>'
+						+'<div class="userMessage">'
+							+'<p>客户使用前照片:</p>'
+							+'<div class="user_picture">'
+								+'<img src="../../assets/img/skin_system_solve_skin_problem_front.png" />'
+								+'<img src="../../assets/img/skin_system_solve_skin_problem_side.png" />'
+							+'</div>'
+						+'</div>'
+						+'<div class="skin_issue clearfix">'
+							+'<p>肌肤问题：</p>'
+							+'<p>'
+								+'<span>干燥</span>'
+								+'<span>痤疮</span>'
+								+'<span>粉刺</span>'
+								+'<span>暗黄肤色不均匀</span>'
+							+'</p>'
+							+'<div class="access" id = '+ (id++) +'>点击进入</div>'
+						+'</div>'
+					+'</div>';
+					$('.container').append(template);
+				}, 1500);
+			}
+			if(mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			} else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				});
+			}
+			//跳转
+			mui(".container").on('tap','.access',function(){
+			// 获取id
+			    var id = this.getAttribute("id");
+			    mui.openWindow({
+			        id:id,
+			//      url:'{{ url_for('jl_ai.health_history_skin_solution') }}?user_skin_id=' + id
+			    });
+			})
+		</script>
+		
+		
+		
+	</body>
+</html>

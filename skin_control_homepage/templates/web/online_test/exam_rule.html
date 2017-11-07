@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1"/>
+		<title>考试规则</title>
+		<link rel="stylesheet" href="../../../assets/css/common/mui.min.css" />
+		<style>
+			html,body{width: 100%;height: 100%; font-family: "微软雅黑";background: linear-gradient(to bottom right,#f7e9cf ,#efd8ae);}
+			header{height: 54px;background: #66503b;color: #f0dab3;line-height: 54px;text-align: center;font-size:20px;}
+			p{color:#66503b;}
+			.rule_title{font-size:19px;text-align: center;margin-top:10px;}
+			.content{width: 95%;margin: 22px auto;}
+			.content p{margin-top: 22px;font-size: 15px;text-indent: 19px;}
+			.start_answer{width:58%;height:50px;background: url(../../../assets/img/skin_control_homepage_online_test_choose_question_bank_page_click_later.png)no-repeat;
+				background-size:100% 50px;margin-left:20%;color: #f0dab3;margin-top: 25px;font-size: 19px;}
+			@media only screen and (min-width: 360px) and (max-width: 360px) {
+				.content p{margin-top: 16px;}
+			}
+			@media only screen and (min-width: 414px) and (max-width: 414px) {
+				.start_answer{margin-top:62px;}
+			}
+			@media only screen and (min-width: 320px) and (max-width: 320px) {
+				header{height: 40px;line-height: 40px;font-size:18px;}
+				.content p{margin-top: 10px;font-size: 14px;}
+				.rule_title{font-size:17px;}
+				.start_answer{margin-top:2px;}
+				.content{margin: 12px auto;}
+				.start_answer{width:40%;height:40px;background-size:100% 40px;margin-left:31%;margin-top:2px;font-size: 15px;}
+			}
+			/*弹出框*/
+			.pop_box{width: 100%;height: 100%;position: absolute;z-index: 998;top: 0;right: 0;bottom: 0;left: 0;background: rgba(0, 0, 0, .4);display: none;}
+			.pop_box .hint{width: 80%;height: 51%; position: absolute;top: 34%;left:50%;margin-top: -35px;margin-left: -40%;border-radius: 13px;
+				background:url(../../../assets/img/skin_control_homepage_online_test_exam_rule_affirm_answer.png)no-repeat;background-size: 100% 100%;}
+			
+			.mui-input-row{margin-left: 26%;}
+			input[type='submit']{width: 30%;height: 40px;margin-left: 10%;margin-top:7%;background:url(../../../assets/img/skin_control_homepage_online_test_exam_rule_click_ago.png)no-repeat;
+				background-size: 100% 100%;	color:#66503b;border: none;}
+			input[type="button"]{width: 30%;height: 40px;margin-left: 14%;margin-top:7%;background:url(../../../assets/img/skin_control_homepage_online_test_exam_rule_click_ago.png)no-repeat;
+				background-size: 100% 100%;	color:#66503b;border: none;}
+			.hint_text{font-size:22px;width: 100%;text-align: center;margin-top: 44%;}
+			.hint_text_content{width: 68%;margin: 0 auto;text-align: center;padding-top: 9px;color: #95784e;}
+		</style>
+	</head>
+	<body>
+		<header>聚力创联微信平台考试规则</header>
+		<p class="rule_title">(一)聚力美容培训班报名考试</p>
+		<section class="content">
+			<p>1.在线考试规则说明为单选题，系统随机分配50道试题，每题4个候选答案。（在正式提交之前均可修改答案，在提交答案后，则不可再修改。）</p>
+			<p>2.考试时间为25分钟，如超出考试时间或者考试结束系统将自动保存考试记录提交试卷。</p>
+			<p>3.每个微信id用户每周只能有一次在线测试的机会，成绩提交后，本周不能重新测试。（题目未答完且中途退出考试系统，视为放弃本次考试机会。）</p>
+			<p>4.正确率80%以上（包括80%），视为通过本次考试。</p>
+			<p>5.考试结束后，请加微信：jlclmall2014，回复:已参加报名考试+真实姓名。</p>
+			<p>6.本次考试通过并获得上级推荐+近3个月销售额3000元及以上或士官及以上级别，有机会参加聚力专业美容培训班，考取聚力初级美容顾问认证。</p>
+		</section>
+		<button type="button" class="start_answer">开始答题</button>
+		<div class="pop_box">
+			<div class="hint">
+				<p class="hint_text">确认开始答题？</p>
+				<p class="hint_text_content">中途退出考试系统，视为自动退出本次考试。如有疑问请联系本商城官方客服！</p>
+				<input type="button" id="cancel" value="取消" />
+				<input id="submit" type="submit" value="确认"/>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script>
+//		开始答题
+			$('.start_answer').click(function(){
+				$('.pop_box').show();
+			})
+//		取消
+			$('#cancel').click(function(){
+				$('.pop_box').hide();
+			})
+			
+//		确认	
+			$('#submit').click(function(){
+				$('.pop_box').hide();
+			})
+			
+		</script>
+		
+	</body>
+</html>

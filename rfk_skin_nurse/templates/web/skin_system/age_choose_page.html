@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1">
+		<title>年龄选择页</title>
+		<link rel="stylesheet" href="../../../assets/css/common/mui.min.css" />
+		<link rel="stylesheet" href="../../../assets/css/common/skin_system_research_common_style.css" />
+		<style>
+			.button_one{background: url(../../../assets/img/rfk_skin_system_ten_age_under.png) no-repeat;background-size:100% 50px;}
+			.button_two{background: url(../../../assets/img/rfk_skin_system_ten_eighteen_among.png) no-repeat;background-size:100% 50px;}
+			.button_three{background: url(../../../assets/img/rfk_skin_system_eighteen_above.png) no-repeat;background-size:100% 50px;}
+			.choose_button{margin: 10px auto;border: 1px solid #727171;border-radius: 8px;display: flex;}
+			.choose_button p{height: 51px;line-height: 51px;}
+			.choose_button p:first-child{font-size:32px;}
+			.change_color{border: 1px solid #eb6d8e;border-radius: 8px;width: 82%;margin: 10px auto;}
+			.age_choose_text_scope{margin-top: 5px;}
+			.button_three_text_scope{margin-top: 5px;}
+			@media only screen and (min-width: 320px) and (max-width: 412px) {
+				.background_brand_logo{margin: 20% 31%;}
+			}
+			
+			header{height: 46px;background:#373b3e;position: fixed;top: 0;left: 0;right: 0;z-index: 5;}
+			
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<section class="container_box  container">
+			<img class="background_brand_logo" src="../../../assets/img/rfk_skin_system_logo.png" />
+			<section class="choose">
+					<div class="choose_button button_one mui-clearfix">
+						<p class="age_choose_text_num">10-20</p>
+						<p class="age_choose_text_scope">岁以下</p>
+					</div>
+					<div class="choose_button button_two mui-clearfix">
+						<p class="button_two_text_num">10-18</p>
+						<p class="age_choose_text_scope">岁</p>
+					</div>
+					<div class="choose_button button_three mui-clearfix">
+						<p class="button_three_text_num">40-50</p>
+						<p class="button_three_text_scope">岁以上</p>
+					</div>
+				
+			</section>
+		</section>
+		<script type="text/javascript" src="../../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script>
+			$('.button_one').click(function(){
+				$(this).addClass('change_color');
+				$(this).find('p').addClass('font_discolor');	
+				window.location.href='morning_night_survey_page.html';
+			})
+			$('.button_two').click(function(){
+				$(this).addClass('change_color');
+				$(this).find('p').addClass('font_discolor');	
+			})
+			$('.button_three').click(function(){
+				$(this).addClass('change_color');
+				$(this).find('p').addClass('font_discolor');	
+			})
+		</script>
+	</body>
+</html>

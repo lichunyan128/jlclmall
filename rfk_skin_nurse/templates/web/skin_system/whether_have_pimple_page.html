@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>是否长过痘痘</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1">
+		<link rel="stylesheet" href="../../../assets/css/common/mui.min.css" />
+		<link rel="stylesheet" href="../../../assets/css/common/skin_system_research_common_style.css" />
+		<style>
+			.choose_button{width:71%;height:51px;border: 1px solid #727171;border-radius: 8px;}
+			.have_pimple{width: 100%;height:51px; background: url(../../../assets/img/rfk_skin_system_whether_have_pimple_have_pocky.png) no-repeat;background-size:100% 50px;}
+			.not_pimple{width: 100%;height:51px; background: url(../../../assets/img/rfk_skin_system_whether_have_pimple_no_have_pocky.png) no-repeat;background-size:100% 50px;}
+			.change_color{border: 1px solid #eb6d8e;border-radius: 8px;}
+			.choose div{margin-top: 5px;}
+			.choose_texts{margin-left: 4%;}
+		</style>
+	</head>
+	<body>
+		<section class="container_box  container">
+			<img class="background_brand_logo" src="../../../assets/img/rfk_skin_system_logo.png" />
+			<section class="choose two_choose">
+				<div class="choose_button have_pimple">
+					<p class="choose_texts">长过痘痘</p>
+				</div>
+				<div class="choose_button not_pimple">
+					<p class="choose_texts">未长过无痘痘</p>
+				</div>
+			</section>
+		</section>
+		
+		<script type="text/javascript" src="../../../assets/js/common/jquery.min.2.1.1.js" ></script>
+		<script>
+			$('.have_pimple').click(function(){
+				$(this).addClass('change_color');
+				$(this).find('p').addClass('font_discolor');
+				window.location.href='morning_night_survey_page.html';
+			});
+			$('.not_pimple').click(function(){
+				$(this).addClass('change_color');
+				$(this).find('p').addClass('font_discolor');
+			})
+		</script>
+	</body>
+</html>
